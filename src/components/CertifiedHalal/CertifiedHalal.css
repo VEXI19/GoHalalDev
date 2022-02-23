@@ -1,0 +1,60 @@
+.CertifiedHalal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #a4d232;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.CertifiedHalalContainer {
+  max-width: 1600px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.CertifiedHalalContainer > img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.CertifiedHalalContainer > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.greenBigText {
+  font-family: "Maven Pro", sans-serif;
+  color: #115c07;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.whiteBigText {
+  font-family: "Maven Pro", sans-serif;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.smallText {
+  font-family: "Maven Pro", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.whiteBackgroundText {
+  font-family: "Maven Pro", sans-serif;
+  color: #a4d232;
+  background-color: white;
+  padding: 3px;
+  font-size: 20px;
+  white-space: nowrap;
+}

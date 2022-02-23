@@ -1,0 +1,37 @@
+.MenuObject {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.MenuObjectContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.MenuObjectContainer > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* margin-left: 15px; */
+}
+
+.MenuObjectContainer > img {
+  width: 1px;
+}
+
+.MenuObjectContainer > div > img:nth-child(n) {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.MenuObjectContainer > div > span {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+}

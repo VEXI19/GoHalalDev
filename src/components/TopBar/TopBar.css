@@ -1,0 +1,65 @@
+.Topbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.TopBarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #115c07;
+}
+
+.TopBarContainer2 {
+  min-width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TopBarRightSide {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.TopBarRightSide > div {
+  height: 100%;
+}
+
+.TopBarDropDownMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #115c07;
+  padding-bottom: 20px;
+  transition: all ease 0.3s;
+}
+
+#dropDownMenuIcon:hover {
+  cursor: pointer;
+}
+
+.TopBarLeftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.TopBarLeftSide {
+  margin-right: 50px;
+}
+
+.TopBarLeftSide > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.TopBarLeftSide > div > span {
+  color: white;
+  font-family: "Maven Pro", sans-serif;
+}

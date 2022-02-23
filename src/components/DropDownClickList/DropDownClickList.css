@@ -1,0 +1,78 @@
+.DropDownClickList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.DropDownClickListHeader {
+  height: 100%;
+  display: flex;
+  width: max-content;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+
+  justify-content: space-between;
+}
+
+.DropDownClickListHeader:hover {
+  cursor: pointer;
+}
+
+.DropDownClickListHeader > span {
+  white-space: nowrap;
+  color: black;
+  font-size: 17px;
+  padding-left: 20px;
+  font-family: "Maven Pro", sans-serif;
+}
+
+.DropDownClickListHeader > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+#arrow {
+  width: 20px;
+}
+
+.Categories {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-width: 220px;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.Categories > div {
+  color: black;
+  width: 100%;
+  font-size: 17px;
+  font-family: "Maven Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Categories > div:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+
+.Categories > div > span {
+  padding: 10px;
+}
+
+.divider {
+  width: 70%;
+  height: 1px;
+  background-color: rgb(207, 207, 207);
+}
