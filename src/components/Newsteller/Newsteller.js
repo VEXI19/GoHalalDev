@@ -29,6 +29,10 @@ function Newsletter(props) {
     setWindowWidth(window.innerWidth);
   });
 
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <div className="Newsletter">
       <div className="NewsletterContainer">

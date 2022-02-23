@@ -14,6 +14,10 @@ function RegisterForUpdates(props) {
     setWindowWidth(window.innerWidth);
   });
 
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   const handleSubmit = () => {
     const email = document.getElementById("RegisterEmail").value;
     console.log(email);

@@ -44,6 +44,10 @@ function BottomMenu(props) {
     setWindowWidth(window.innerWidth);
   });
 
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <div className="BottomMenu">
       <div
