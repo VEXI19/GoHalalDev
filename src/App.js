@@ -5,15 +5,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/" element={<MainPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Router>
-  );
+  return <MainPage />;
 }
 
 export default App;
