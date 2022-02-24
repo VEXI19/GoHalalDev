@@ -2,14 +2,15 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  /* padding: 20px; */
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .BottomMenuContainer {
   max-width: 1500px;
-  width: 100%;
+  height: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,9 +24,9 @@
   width: 100%;
 
   align-items: center;
-  min-height: 330px;
+  min-height: 350px;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .BottomMenuHeader {
@@ -34,6 +35,7 @@
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .BottomMenuText {
@@ -52,12 +54,16 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
+  align-items: center;
 }
 
 .ListDiv {
   min-width: 100px;
   justify-content: space-between;
   margin-left: 20px;
+  height: 300px;
+  /* background-color: red; */
 }
 
 .ContactInfo {
@@ -79,4 +85,78 @@
 
 .ContactInfo > div > img {
   margin-right: 20px;
+}
+
+.LanguageDropDown {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.LanguageDropDownHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.LanguageDropDownHeader > span {
+  font-family: "Maven Pro", sans-serif;
+  color: black;
+  font-size: 17px;
+  text-align: left;
+  margin-left: 20px;
+  width: 80%;
+}
+
+.LanguageDropDownHeader > div {
+  height: 50px;
+  width: 50px;
+  background-color: #a4d232;
+  display: flex;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.LanguageDropDownHeader > div > img {
+  width: 20px;
+  height: 20px;
+}
+
+.LanguageDropDownOptions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  transform: translateY(50px);
+  max-height: 350px;
+
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.LanguageDropDownOptions > span {
+  font-family: "Maven Pro", sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 17px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.LanguageDropDownOptions > span:hover {
+  background-color: rgb(214, 214, 214);
 }

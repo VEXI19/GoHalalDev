@@ -4,7 +4,8 @@ import "./BottomMenu.css";
 import Phone from "../../icons/VectorPhone.svg";
 import Address from "../../icons/Vector (2).svg";
 import Mail from "../../icons/Vector (3).svg";
-import DropDownClickList from "../DropDownClickList/DropDownClickLIst";
+import arrowDown from "../../icons/down-arrow.png";
+import arrowUp from "../../icons/up-arrow.png";
 
 function BottomMenu(props) {
   const tabs = {
@@ -39,7 +40,12 @@ function BottomMenu(props) {
     ],
   };
 
+  const languageArray = ["English", "German", "Polish", "Spanish"];
+
   const [windowWidth, setWindowWidth] = React.useState(null);
+  const [languageShow, setLanguageShow] = React.useState(false);
+  const [languagePick, setLanguagePick] = React.useState(false);
+
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
   });
@@ -61,7 +67,7 @@ function BottomMenu(props) {
         <div
           className="VerticalDiv LongDiv"
           style={
-            windowWidth <= 1500
+            (windowWidth <= 1500) & (windowWidth >= 650)
               ? { marginBottom: "30px" }
               : { marginBottom: "0" }
           }
@@ -96,8 +102,20 @@ function BottomMenu(props) {
             </div>
           </div>
         </div>
-        <div className="ListDivsContainer">
-          <div className="VerticalDiv ListDiv">
+        <div
+          className="ListDivsContainer"
+          style={
+            windowWidth <= 650
+              ? { flexDirection: "column" }
+              : { flexDirection: "row" }
+          }
+        >
+          <div
+            className="VerticalDiv ListDiv"
+            style={
+              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+            }
+          >
             <span className="BottomMenuHeader">
               {getTranslation("Useful Links")}
             </span>
@@ -113,7 +131,12 @@ function BottomMenu(props) {
               );
             })}
           </div>
-          <div className="VerticalDiv ListDiv">
+          <div
+            className="VerticalDiv ListDiv"
+            style={
+              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+            }
+          >
             <span className="BottomMenuHeader">
               {getTranslation("Help Center")}
             </span>
@@ -129,7 +152,12 @@ function BottomMenu(props) {
               );
             })}
           </div>
-          <div className="VerticalDiv ListDiv">
+          <div
+            className="VerticalDiv ListDiv"
+            style={
+              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+            }
+          >
             <span className="BottomMenuHeader">
               {getTranslation("Go Halal Business")}
             </span>
@@ -144,13 +172,43 @@ function BottomMenu(props) {
                 </span>
               );
             })}
-            <div style={{ height: "40px", marginTop: "40px" }}>
-              <DropDownClickList
-                categories={["English", "Polish", "Spanish", "German"]}
-                placeholder="English"
-                border={true}
-                marginBottom="40px"
-              />
+            <div style={{ height: "50px" }}>
+              <div className="LanguageDropDown">
+                <div
+                  className="LanguageDropDownHeader"
+                  onClick={() => {
+                    setLanguageShow(!languageShow);
+                  }}
+                >
+                  <span id="LanguagePickElem">{getTranslation("English")}</span>
+                  <div>
+                    <img src={languageShow ? arrowUp : arrowDown} alt="" />
+                  </div>
+                </div>
+                {languageShow && (
+                  <div className="LanguageDropDownOptions">
+                    {languageArray.map((elem, index) => {
+                      return (
+                        <span
+                          onClick={() => {
+                            document.getElementById(
+                              "LanguagePickElem"
+                            ).innerHTML = elem;
+                            document.getElementById(
+                              "LanguagePickElem"
+                            ).style.color = "black";
+                            setLanguageShow(false);
+                            setLanguagePick(elem);
+                          }}
+                          key={index}
+                        >
+                          {getTranslation(elem)}
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -10,6 +10,9 @@ import YouTube from "../../icons/Vector (8).svg";
 function RegisterForUpdates(props) {
   const [windowWidth, setWindowWidth] = React.useState(null);
 
+  const [email, setEmail] = React.useState(null);
+  const [buttonHover, setButtonHover] = React.useState(false);
+
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
   });
@@ -55,8 +58,24 @@ function RegisterForUpdates(props) {
                 }
           }
         >
-          <input id="RegisterEmail" placeholder="Your E-Mail Adress..." />
-          <button onClick={() => handleSubmit()}>
+          <input
+            id="RegisterEmail"
+            onChange={(obj) => setEmail(obj.currentTarget.value)}
+            placeholder="Your E-Mail Adress..."
+          />
+          <button
+            disabled={!email}
+            onMouseEnter={() => setButtonHover(true)}
+            onMouseLeave={() => setButtonHover(false)}
+            style={
+              !email
+                ? { backgroundColor: "#556453", cursor: "auto" }
+                : buttonHover
+                ? { backgroundColor: "#0e3f07", cursor: "pointer" }
+                : { backgroundColor: "#115c07", cursor: "pointer" }
+            }
+            onClick={() => handleSubmit()}
+          >
             {getTranslation("Register Now")}
           </button>
         </div>

@@ -53,7 +53,14 @@ function MenuObject({
       <div className="MenuObjectContainer" id={"menuObjectContainer" + id}>
         <div>
           <img id={"icon" + id} src={icon} alt="" />
-          <span id={"text" + id}>{getTranslation(text)}</span>
+          <span
+            style={
+              isVerticalLine ? { paddingRight: "10px" } : { paddingRight: "0" }
+            }
+            id={"text" + id}
+          >
+            {getTranslation(text)}
+          </span>
         </div>
         {isVerticalLine && <img src={VerticalLine} alt="" />}
       </div>

@@ -5,13 +5,15 @@
 }
 
 .CategoriesBarContainer {
-  width: 80%;
+  width: 95%;
+  max-width: 1500px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
+.CategoriesBarContainer > div > div,
 .CategoriesBarContainer > div {
   height: 100%;
   /* background-color: red; */
@@ -21,6 +23,7 @@
   cursor: pointer;
 }
 
+.CategoriesBarContainer > div > div > span,
 .CategoriesBarContainer > div > span {
   font-family: "Maven Pro", sans-serif;
   font-weight: 400;
@@ -31,6 +34,6 @@
 .divider3 {
   width: 1px;
   margin-right: 10px;
-  max-height: 70%;
+  height: 10px;
   background-color: grey;
 }

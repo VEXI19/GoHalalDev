@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainControlBar.css";
-import logo from "../../icons/GroupLogo.svg";
+import logo from "../../icons/GroupLogo (2).svg";
 import FollowUs from "../../icons/FollowUs.svg";
 import Adress from "../../icons/Adress.svg";
 import MyRecipies from "../../icons/MyRecipies.svg";
@@ -82,8 +82,10 @@ function MainControlBar(props) {
   const [shortLayout, setShortLayout] = React.useState(
     window.innerWidth <= 1200
   );
+  const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
 
   window.addEventListener("resize", () => {
+    setWindowWitdth(window.innerWidth);
     if (window.innerWidth <= 1200) {
       setShortLayout(true);
     } else {
@@ -103,35 +105,78 @@ function MainControlBar(props) {
       : "row";
 
     Buttons.style.maxWidth = shortLayout ? "700px" : "500px";
-    Buttons.style.marginTop = shortLayout ? "20px" : "0px";
+    Buttons.style.marginLeft = shortLayout ? "0px" : "50px";
   }, [shortLayout]);
 
   return (
     <div className="MainControlBar">
       <div id="MainControlBarContainer" className="MainControlBarContainer">
-        <div>
-          <div className="logo">
-            <img src={logo} alt="" />
+        <div
+          style={
+            windowWitdth <= 570
+              ? { flexDirection: "column" }
+              : { flexDirection: "row" }
+          }
+          className="SearchBarLogo"
+        >
+          <div
+            style={
+              windowWitdth <= 570
+                ? { marginBottom: "20px", width: "150px", height: "150px" }
+                : { marginBottom: "0", width: "90px", height: "90px" }
+            }
+            className="logo"
+          >
+            <img
+              style={
+                windowWitdth <= 570
+                  ? {
+                      width: "150px",
+                      height: "150px",
+                    }
+                  : { width: "90px", height: "90px" }
+              }
+              src={logo}
+              alt=""
+            />
           </div>
-          <div className="SearchBarContainer">
-            <SearchBar placeholder="I'm searching for" />
-            <div className="Regional">
-              <span>Regional:</span>
-              {Countries.map((elem, index) => {
-                return (
-                  <div key={index} onClick={() => console.log(elem)}>
-                    <span>{elem}</span>
 
-                    {index !== Countries.length - 1 && (
-                      <div className="devider2"></div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+          <div
+            className="SearchBarContainer"
+            style={
+              windowWitdth <= 570
+                ? { marginLeft: "0px" }
+                : { marginLeft: "30px" }
+            }
+          >
+            <SearchBar placeholder="I'm searching for" />
+            {windowWitdth >= 700 && (
+              <div className="Regional">
+                <span>Regional:</span>
+                {Countries.map((elem, index) => {
+                  return (
+                    <div key={index} onClick={() => console.log(elem)}>
+                      <span>{elem}</span>
+
+                      {index !== Countries.length - 1 && (
+                        <div className="devider2"></div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
-        <div id="Buttons" className="Buttons">
+        <div
+          id="Buttons"
+          className="Buttons"
+          style={
+            windowWitdth > 570 && windowWitdth < 1200
+              ? { marginTop: "20px" }
+              : { marginTop: "0" }
+          }
+        >
           {Buttons.map((elem, index) => (
             <ButtonWithDropDown key={index} elem={elem} />
           ))}

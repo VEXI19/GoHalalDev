@@ -26,11 +26,13 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .PaymentMethods > div > div > img {
   max-height: 90px;
   height: 100%;
+  max-width: 90%;
   object-fit: contain;
   width: auto;
   resize: both;

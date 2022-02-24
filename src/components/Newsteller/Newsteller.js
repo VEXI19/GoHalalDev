@@ -8,10 +8,6 @@ function Newsletter(props) {
   const [recaptcha, setRecaptcha] = React.useState(false);
 
   const submitForm = () => {
-    const firstName = document.getElementById("NewsLetterFirstName").value;
-    const lastName = document.getElementById("NewsLetterLastName").value;
-    const email = document.getElementById("NewsLetterEmail").value;
-
     const data = {
       firstName,
       lastName,
@@ -24,6 +20,14 @@ function Newsletter(props) {
   };
 
   const [windowWidth, setWindowWidth] = React.useState(null);
+
+  const [firstName, setFirstName] = React.useState(null);
+  const [lastName, setLastName] = React.useState(null);
+  const [email, setEmail] = React.useState(null);
+
+  const [buttonHover, setButtonHover] = React.useState(false);
+
+  var buttonDisabled = firstName && lastName && email && checkBox && recaptcha;
 
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
@@ -50,6 +54,7 @@ function Newsletter(props) {
           <input
             className="NewsLetterInput"
             placeholder={getTranslation("First Name")}
+            onChange={(obj) => setFirstName(obj.currentTarget.value)}
             id="NewsLetterFirstName"
             style={
               windowWidth <= 850
@@ -60,6 +65,7 @@ function Newsletter(props) {
           <input
             className="NewsLetterInput"
             placeholder={getTranslation("Last Name")}
+            onChange={(obj) => setLastName(obj.currentTarget.value)}
             id="NewsLetterLastName"
             style={
               windowWidth <= 850
@@ -71,6 +77,7 @@ function Newsletter(props) {
             className="NewsLetterInput"
             placeholder={getTranslation("Email Adress")}
             id="NewsLetterEmail"
+            onChange={(obj) => setEmail(obj.currentTarget.value)}
             style={
               windowWidth <= 850
                 ? { marginLeft: "0", marginTop: "20px", maxWidth: "400px" }
@@ -123,7 +130,19 @@ function Newsletter(props) {
           }}
         />
 
-        <button disabled={!recaptcha} onClick={() => submitForm()}>
+        <button
+          disabled={!buttonDisabled}
+          onMouseEnter={() => setButtonHover(true)}
+          onMouseLeave={() => setButtonHover(false)}
+          style={
+            !buttonDisabled
+              ? { backgroundColor: "#556453", cursor: "auto" }
+              : buttonHover
+              ? { backgroundColor: "#0e3f07", cursor: "pointer" }
+              : { backgroundColor: "#115c07", cursor: "pointer" }
+          }
+          onClick={() => submitForm()}
+        >
           {getTranslation("Subscribe")}
         </button>
       </div>

@@ -67,11 +67,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #115c07;
-}
-
-.InputContainer > button:hover {
-  background-color: #0e3f07;
 }
 
 .InputContainer > input {

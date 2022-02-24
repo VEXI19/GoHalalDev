@@ -6,51 +6,72 @@
 }
 
 .DiscbountBarContainer {
-  width: 80%;
+  max-width: 1500px;
+  width: 95%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 35px;
 }
 
-.DiscbountBarContainer > div {
+.DiscountBarRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.DiscountBarRowsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 130%;
+  justify-content: space-between;
+}
+
+.DiscountBarRow > div {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
 }
 
-.DiscbountBarContainer > div:hover {
+.DiscountBarRow > div:hover {
   cursor: pointer;
 }
 
-.DiscbountBarContainer > div > span {
+.DiscountBarRow > div > span {
   font-size: 18px;
   font-weight: bold;
   font-family: "Maven Pro", sans-serif;
 }
 
-.DiscbountBarContainer > div > div > span {
+.DiscountBarRow > div > div > span {
   font-size: 18px;
   color: #115c07;
   font-weight: bold;
   font-family: "Maven Pro", sans-serif;
 }
 
-.DiscbountBarContainer > div > img {
+.DiscountBarRow > div > img {
   padding-right: 10px;
 }
 
-.DiscbountBarContainer > div > div {
+.DiscountBarRow > div > div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: fit-content;
   height: 100%;
 }
 
-.DiscbountBarContainer > div > div > div {
+.DiscountBarRow > div > div > div {
   background-color: #115c07;
   width: 100%;
   height: 3px;
+}
+
+.spaceAround {
+  justify-content: space-around;
 }

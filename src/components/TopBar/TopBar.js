@@ -139,7 +139,7 @@ function TopBar(props) {
   });
 
   return (
-    <div className="TopBar">
+    <>
       <div className="TopBarContainer">
         <div id="TopBarContainer2" className="TopBarContainer2">
           <div className="TopBarLeftSide">
@@ -198,7 +198,7 @@ function TopBar(props) {
           })}
         </div>
       )}
-    </div>
+    </>
   );
 }
 

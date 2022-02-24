@@ -1,11 +1,25 @@
+.DropDownList {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
 .DropDownListContainer {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: rgb(228, 228, 228);
-  /* border: 1px grey solid; */
-  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
   min-width: 200px;
+}
+
+.DropDownListContainer::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 20px;
+  transform: translateY(-100%) translateX(50%);
 }
 
 .DropDownListContainer:hover {
@@ -17,13 +31,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 13px;
-  /* padding: 5px; */
+  padding: 15px;
 }
 
 .DropDownListContainer > div > div:hover {
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
 }
 
 .DropDownListContainer > div > div > div {

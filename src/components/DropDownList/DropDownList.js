@@ -13,12 +13,11 @@ function DropDownList({ list, show, translateDown }) {
   };
 
   return (
-    <>
+    <div className="DropDownList" style={style}>
       {hover && list && (
         <div
           className="DropDownListContainer"
           id="DropDownListContainer"
-          style={style}
           onMouseEnter={() => {
             setHover(true);
           }}
@@ -44,7 +43,7 @@ function DropDownList({ list, show, translateDown }) {
           })}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

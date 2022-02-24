@@ -19,9 +19,20 @@ function CategoriesBar(props) {
     { text: "Bread", icon: Bread },
   ];
 
+  const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
+
+  window.addEventListener("resize", () => setWindowWitdth(window.innerWidth));
+
   return (
     <div className="CategoriesBar">
-      <div className="CategoriesBarContainer">
+      <div
+        className="CategoriesBarContainer"
+        style={
+          windowWitdth <= 590
+            ? { justifyContent: "center" }
+            : { justifyContent: "space-between" }
+        }
+      >
         <div onClick={() => console.log("All Categories")}>
           <img src={Menu} alt="" />
           <span>{getTranslation("All Categories")}</span>
@@ -33,21 +44,30 @@ function CategoriesBar(props) {
             alt=""
           />
         </div>
-        {tabs.map((elem, index) => {
-          return (
-            <>
-              <div onClick={() => console.log(elem.text)}>
-                <img src={elem.icon} alt="" />
-                <span>{elem.text}</span>
-              </div>
-              <div className="divider3" />
-            </>
-          );
-        })}
-        <div onClick={() => console.log("See more")}>
-          <span>{getTranslation("See more")}</span>
-          <img src={RightArrow} alt="" />
-        </div>
+
+        {windowWitdth >= 590 && (
+          <>
+            {tabs.map((elem, index) => {
+              return (
+                <div key={index}>
+                  {windowWitdth / index > 300 && (
+                    <>
+                      <div onClick={() => console.log(elem.text)}>
+                        <img src={elem.icon} alt="" />
+                        <span>{elem.text}</span>
+                        <div className="devider3"></div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+            <div onClick={() => console.log("See more")}>
+              <span>{getTranslation("See more")}</span>
+              <img src={RightArrow} alt="" />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

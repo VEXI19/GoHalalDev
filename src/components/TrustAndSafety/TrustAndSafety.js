@@ -22,6 +22,10 @@ function TrustAndSafety(props) {
 
   window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
 
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <div className="TrustAndSafety">
       <span>{getTranslation("Trust & Safety")}</span>

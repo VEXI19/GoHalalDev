@@ -8,6 +8,16 @@ import { getTranslation } from "../../Utils/getLanguage";
 import ContactUsForm from "../ContactUsForm/ContactUsForm";
 
 function ContactUs(props) {
+  const [windowWidth, setWindowWidth] = React.useState(null);
+
+  React.useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  window.addEventListener("resize", () => {
+    setWindowWidth(window.innerWidth);
+  });
+
   return (
     <div className="ContactUs">
       <div className="ContactUsContainer">
@@ -17,9 +27,22 @@ function ContactUs(props) {
             "Please complete the contact form so that we can answer your questions, requests, feedback and suggestions."
           )}
         </span>
-        <div>
+        <div
+          style={
+            windowWidth <= 1100
+              ? { flexDirection: "column-reverse" }
+              : { flexDirection: "row" }
+          }
+        >
           <ContactUsForm />
-          <div className="ContactUsInfo">
+          <div
+            className="ContactUsInfo"
+            style={
+              windowWidth <= 1100
+                ? { marginBottom: "50px" }
+                : { marginBottom: "0" }
+            }
+          >
             <img src={ContactUsIcon} alt="" />
             <div className="RowText">
               <img src={Phone} alt="" />

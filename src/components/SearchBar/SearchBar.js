@@ -15,12 +15,7 @@ function SearchBar({ isCategories = true, placeholder, button = "" }) {
   return (
     <div className="SearchBar">
       <form action="/" method="get">
-        <input
-          type="text"
-          id="header-search"
-          placeholder={placeholder}
-          name="s"
-        />
+        <input type="text" id="header-search" placeholder={placeholder} />
         <div>
           {isCategories && (
             <>
