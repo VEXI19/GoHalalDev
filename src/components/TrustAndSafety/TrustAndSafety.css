@@ -18,11 +18,11 @@
 
 .TrustAndSafetyContainer {
   display: flex;
-  max-width: 1700px;
-  width: 100%;
+  max-width: 1500px;
+  width: 90%;
 
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .TrustAndSafetyContainer > div {

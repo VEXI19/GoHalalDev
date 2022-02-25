@@ -127,14 +127,11 @@ function TopBar(props) {
 
   window.addEventListener("resize", () => {
     var width = window.innerWidth;
-    const container = document.getElementById("TopBarContainer2");
     if (width <= 1200) {
       setShortVersion(true);
-      container.style.minWidth = "95%";
     } else {
       setShortVersion(false);
       setMenuDropDown(false);
-      container.style.minWidth = "80%";
     }
   });
 

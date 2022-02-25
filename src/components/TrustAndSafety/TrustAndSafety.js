@@ -1,6 +1,6 @@
 import React from "react";
 import "./TrustAndSafety.css";
-import HalalCertificate from "../../icons/GroupcertifiedHalal.svg";
+import HalalCertificate from "../../icons/Trusted Halal Shop 1.png";
 import TrustPilotLogo from "../../icons/image 203.png";
 import SecurePayment from "../../icons/Group (6).svg";
 import { getTranslation } from "../../Utils/getLanguage";

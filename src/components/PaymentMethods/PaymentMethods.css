@@ -16,16 +16,16 @@
 }
 
 .PaymentMethods > div {
-  max-width: 1800px;
-  width: 100%;
+  max-width: 1500px;
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .PaymentMethods > div > div {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 

@@ -18,7 +18,6 @@ function MenuObject({
 
   React.useEffect(() => {
     const menu = document.getElementById("menuObjectContainer" + id);
-
     if (shortVersion) {
       menu.style.padding = "5px";
     } else {
