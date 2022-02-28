@@ -29,17 +29,17 @@ function ContactUs(props) {
         </span>
         <div
           style={
-            windowWidth <= 1100
-              ? { flexDirection: "column-reverse" }
-              : { flexDirection: "row" }
+            windowWidth <= 1370
+              ? { flexDirection: "column-reverse", alignItems: "center" }
+              : { flexDirection: "row", alignItems: "flex-start" }
           }
         >
           <ContactUsForm />
           <div
             className="ContactUsInfo"
             style={
-              windowWidth <= 1100
-                ? { marginBottom: "50px" }
+              windowWidth <= 1370
+                ? { marginBottom: "min(20vw, 50px)" }
                 : { marginBottom: "0" }
             }
           >

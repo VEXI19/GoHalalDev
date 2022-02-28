@@ -27,71 +27,126 @@ function PaymentMethods(props) {
             : { flexDirection: "row" }
         }
       >
-        <div
-          style={
-            windowWidth <= 750
-              ? { flexDirection: "column" }
-              : windowWidth <= 1630
-              ? { flexDirection: "row", marginBottom: "40px" }
-              : { flexDirection: "row", marginBottom: "0" }
-          }
-        >
-          <img
-            style={
-              windowWidth <= 750
-                ? { marginBottom: "70px" }
-                : { marginBottom: "0" }
-            }
-            src={VisaLogo}
-            alt=""
-          />
-          <img
-            style={
-              windowWidth <= 750
-                ? { marginBottom: "70px" }
-                : { marginBottom: "0" }
-            }
-            src={MasterCardLogo}
-            alt=""
-          />
-          <img
-            style={
-              windowWidth <= 750
-                ? { marginBottom: "70px" }
-                : { marginBottom: "0" }
-            }
-            src={AmericanExpressLogo}
-            alt=""
-          />
-        </div>
-        <div
-          style={
-            windowWidth <= 750
-              ? { flexDirection: "column" }
-              : { flexDirection: "row" }
-          }
-        >
-          <img
-            style={
-              windowWidth <= 750
-                ? { marginBottom: "70px" }
-                : { marginBottom: "0" }
-            }
-            src={DiscoverLogo}
-            alt=""
-          />
+        {windowWidth <= 1630 && (
+          <>
+            <div
+              style={
+                windowWidth <= 750
+                  ? { flexDirection: "column" }
+                  : windowWidth <= 1630
+                  ? { flexDirection: "row", marginBottom: "40px" }
+                  : { flexDirection: "row", marginBottom: "0" }
+              }
+            >
+              <img
+                style={
+                  windowWidth <= 750
+                    ? { marginBottom: "min(15vw, 70px)" }
+                    : { marginBottom: "0" }
+                }
+                src={VisaLogo}
+                alt=""
+              />
+              <img
+                style={
+                  windowWidth <= 750
+                    ? { marginBottom: "min(15vw, 70px)" }
+                    : { marginBottom: "0" }
+                }
+                src={MasterCardLogo}
+                alt=""
+              />
+              <img
+                style={
+                  windowWidth <= 750
+                    ? { marginBottom: "min(15vw, 70px)" }
+                    : { marginBottom: "0" }
+                }
+                src={AmericanExpressLogo}
+                alt=""
+              />
+            </div>
+            <div
+              style={
+                windowWidth <= 750
+                  ? { flexDirection: "column" }
+                  : { flexDirection: "row" }
+              }
+            >
+              <img
+                style={
+                  windowWidth <= 750
+                    ? { marginBottom: "min(15vw, 70px)" }
+                    : { marginBottom: "0" }
+                }
+                src={DiscoverLogo}
+                alt=""
+              />
 
-          <img
-            style={
-              windowWidth <= 750
-                ? { marginBottom: "70px" }
-                : { marginBottom: "0" }
-            }
-            src={SofortLogo}
-            alt=""
-          />
-          <img src={PayPalLogo} alt="" />
-        </div>
+              <img
+                style={
+                  windowWidth <= 750
+                    ? { marginBottom: "min(15vw, 70px)" }
+                    : { marginBottom: "0" }
+                }
+                src={SofortLogo}
+                alt=""
+              />
+              <img src={PayPalLogo} alt="" />
+            </div>
+          </>
+        )}
+        {windowWidth > 1630 && (
+          <>
+            <img
+              style={
+                windowWidth <= 750
+                  ? { marginBottom: "min(15vw, 70px)" }
+                  : { marginBottom: "0" }
+              }
+              src={VisaLogo}
+              alt=""
+            />
+            <img
+              style={
+                windowWidth <= 750
+                  ? { marginBottom: "min(15vw, 70px)" }
+                  : { marginBottom: "0" }
+              }
+              src={MasterCardLogo}
+              alt=""
+            />
+            <img
+              style={
+                windowWidth <= 750
+                  ? { marginBottom: "min(15vw, 70px)" }
+                  : { marginBottom: "0" }
+              }
+              src={AmericanExpressLogo}
+              alt=""
+            />
+            <img
+              style={
+                windowWidth <= 750
+                  ? { marginBottom: "min(15vw, 70px)" }
+                  : { marginBottom: "0" }
+              }
+              src={DiscoverLogo}
+              alt=""
+            />
+
+            <img
+              style={
+                windowWidth <= 750
+                  ? { marginBottom: "min(15vw, 70px)" }
+                  : { marginBottom: "0" }
+              }
+              src={SofortLogo}
+              alt=""
+            />
+            <img src={PayPalLogo} alt="" />
+          </>
+        )}
       </div>
     </div>
   );

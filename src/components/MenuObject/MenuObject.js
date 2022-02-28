@@ -19,7 +19,7 @@ function MenuObject({
   React.useEffect(() => {
     const menu = document.getElementById("menuObjectContainer" + id);
     if (shortVersion) {
-      menu.style.padding = "5px";
+      menu.style.padding = "min(1vw, 5px)";
     } else {
       menu.style.padding = "0px";
     }
@@ -64,7 +64,7 @@ function MenuObject({
         {isVerticalLine && <img src={VerticalLine} alt="" />}
       </div>
       {dropDownList && showDropDownList && (
-        <DropDownList translateDown="38px" show={hover} list={dropDownList} />
+        <DropDownList translateDown="20px" show={hover} list={dropDownList} />
       )}
     </div>
   );

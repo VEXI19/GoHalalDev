@@ -6,30 +6,50 @@ import Founder3 from "../../icons/Group 2331founder.svg";
 import { getTranslation } from "../../Utils/getLanguage";
 
 function Founders(props) {
-  window.addEventListener("resize", () => {
+  React.useEffect(() => {
     if (window.innerWidth <= 1060) {
       document.getElementById("FoundersPhotos").style.flexDirection = "column";
       document.getElementById("founder1").style.marginBottom = "20px";
-      document.getElementById("founder1").style.maxWidth = "350px";
       document.getElementById("founder2").style.marginBottom = "20px";
-      document.getElementById("founder2").style.maxWidth = "350px";
       document.getElementById("founder3").style.marginBottom = "20px";
-      document.getElementById("founder3").style.maxWidth = "350px";
+      document.getElementById("founder1").style.maxWidth = "min(40vw, 220px)";
+      document.getElementById("founder2").style.maxWidth = "min(40vw, 220px)";
+      document.getElementById("founder3").style.maxWidth = "min(40vw, 220px)";
     } else {
       document.getElementById("FoundersPhotos").style.flexDirection = "row";
       document.getElementById("founder1").style.marginBottom = "0px";
       document.getElementById("founder2").style.marginBottom = "0px";
       document.getElementById("founder3").style.marginBottom = "0px";
-      document.getElementById("founder1").style.maxWidth = "280px";
+      document.getElementById("founder1").style.maxWidth = "200px";
+      document.getElementById("founder2").style.maxWidth = "200px";
+      document.getElementById("founder3").style.maxWidth = "200px";
+    }
+  }, []);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 1060) {
+      document.getElementById("FoundersPhotos").style.flexDirection = "column";
+      document.getElementById("founder1").style.marginBottom = "20px";
+      document.getElementById("founder2").style.marginBottom = "20px";
+      document.getElementById("founder3").style.marginBottom = "20px";
+      document.getElementById("founder1").style.maxWidth = "min(40vw, 220px)";
+      document.getElementById("founder2").style.maxWidth = "min(40vw, 220px)";
+      document.getElementById("founder3").style.maxWidth = "min(40vw, 220px)";
+    } else {
+      document.getElementById("FoundersPhotos").style.flexDirection = "row";
+      document.getElementById("founder1").style.marginBottom = "0px";
+      document.getElementById("founder2").style.marginBottom = "0px";
+      document.getElementById("founder3").style.marginBottom = "0px";
       document.getElementById("founder2").style.maxWidth = "280px";
       document.getElementById("founder3").style.maxWidth = "280px";
+      document.getElementById("founder1").style.maxWidth = "280px";
     }
   });
 
   return (
     <div className="Founders">
       <div className="FoundersContainer">
-        <span>{getTranslation("OUR FOUNDERS")}</span>
+        <span id="FoundersText">{getTranslation("OUR FOUNDERS")}</span>
         <div id="FoundersPhotos" className="FoundersPhotos">
           <img
             onClick={() => console.log("founder3")}

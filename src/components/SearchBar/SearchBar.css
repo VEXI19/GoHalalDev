@@ -1,6 +1,6 @@
 .SearchBar {
-  height: 70%;
-  min-width: 200px;
+  height: fit-content;
+  /* min-width: 200px; */
   width: 100%;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -19,11 +19,13 @@
   width: 100%;
   height: 100%;
   border: none;
+
+  padding: min(1vw, 10px);
   background-color: transparent;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: min(3vw, 10px);
+  padding-right: min(3vw, 10px);
   font-family: "Maven Pro", sans-serif;
-  font-size: 17px;
+  font-size: min(3vw, 17px);
 }
 
 .SearchBar > form > div {
@@ -31,6 +33,7 @@
   flex-direction: row;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .SearchBar > form > div > button {
@@ -45,6 +48,14 @@
 .SearchBar > form > div > button:hover {
   background-color: #728b1d;
   cursor: pointer;
+}
+
+.SearchBar > form > div > button > span {
+  font-family: "Maven Pro", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: min(3vw, 17px);
+  white-space: nowrap;
 }
 
 .devider {

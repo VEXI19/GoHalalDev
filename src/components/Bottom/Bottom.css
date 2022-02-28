@@ -14,3 +14,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.BottomContainer > span {
+  font-size: min(2vw, 17px);
+}

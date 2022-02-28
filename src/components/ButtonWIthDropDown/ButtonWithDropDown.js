@@ -4,6 +4,7 @@ import DropDownList from "../DropDownList/DropDownList";
 
 function ButtonWithDropDown({ elem }) {
   const [showDropDown, setShowDropDown] = React.useState(false);
+
   return (
     <div
       className="ButtonWithDropDown"
@@ -18,7 +19,8 @@ function ButtonWithDropDown({ elem }) {
       <img src={elem.icon} alt=""></img>
       <span>{elem.text}</span>
       <DropDownList
-        translateDown="70px"
+        id="DropDownList"
+        translateDown="min(7vw, 35px)"
         show={showDropDown}
         list={elem.dropDowns}
       />

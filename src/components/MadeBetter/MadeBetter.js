@@ -8,8 +8,8 @@ function MadeBetter(props) {
     if (window.innerWidth <= 1050) {
       document.getElementById("MadeBetterContainer").style.flexDirection =
         "column";
-      document.getElementById("MadeBetterContainer").style.width = "80%";
-      document.getElementById("MadeBetter").style.paddingTop = "80px";
+      document.getElementById("MadeBetterContainer").style.width = "60%";
+      document.getElementById("MadeBetter").style.paddingTop = "40px";
       document.getElementById("MadeBetter").style.paddingBottom = "0px";
     } else {
       document.getElementById("MadeBetterContainer").style.flexDirection =
@@ -24,8 +24,8 @@ function MadeBetter(props) {
     if (window.innerWidth <= 1050) {
       document.getElementById("MadeBetterContainer").style.flexDirection =
         "column";
-      document.getElementById("MadeBetterContainer").style.width = "80%";
-      document.getElementById("MadeBetter").style.paddingTop = "80px";
+      document.getElementById("MadeBetterContainer").style.width = "60%";
+      document.getElementById("MadeBetter").style.paddingTop = "40px";
       document.getElementById("MadeBetter").style.paddingBottom = "0px";
     } else {
       document.getElementById("MadeBetterContainer").style.flexDirection =

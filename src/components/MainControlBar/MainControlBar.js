@@ -119,37 +119,42 @@ function MainControlBar(props) {
           }
           className="SearchBarLogo"
         >
-          <div
-            style={
-              windowWitdth <= 570
-                ? { marginBottom: "20px", width: "150px", height: "150px" }
-                : { marginBottom: "0", width: "90px", height: "90px" }
-            }
-            className="logo"
-          >
-            <img
+          {windowWitdth >= 700 && (
+            <div
               style={
                 windowWitdth <= 570
-                  ? {
-                      width: "150px",
-                      height: "150px",
-                    }
-                  : { width: "90px", height: "90px" }
+                  ? { marginBottom: "20px", width: "150px", height: "150px" }
+                  : { marginBottom: "0", width: "90px", height: "90px" }
               }
-              src={logo}
-              alt=""
-            />
-          </div>
+              className="logo"
+            >
+              <img
+                // style={
+                //   windowWitdth <= 570
+                //     ? {
+                //         width: "150px",
+                //         height: "150px",
+                //       }
+                //     : { width: "90px", height: "90px" }
+                // }
+                src={logo}
+                alt=""
+              />
+            </div>
+          )}
 
           <div
             className="SearchBarContainer"
-            style={
-              windowWitdth <= 570
-                ? { marginLeft: "0px" }
-                : { marginLeft: "30px" }
-            }
+            // style={
+            //   windowWitdth <= 570
+            //     ? { marginLeft: "0px" }
+            //     : { marginLeft: "30px" }
+            // }
           >
-            <SearchBar placeholder="I'm searching for" />
+            <SearchBar
+              // isCategories={windowWitdth >= 500}
+              placeholder="I'm searching for"
+            />
             {windowWitdth >= 700 && (
               <div className="Regional">
                 <span>Regional:</span>

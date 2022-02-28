@@ -42,7 +42,7 @@ function TrustAndSafety(props) {
             key={index}
             style={
               windowWidth <= 950 && index !== tabs.length - 1
-                ? { marginBottom: "50px" }
+                ? { marginBottom: "min(10vw, 50px)" }
                 : { marginBottom: "0" }
             }
           >

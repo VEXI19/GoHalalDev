@@ -9,7 +9,7 @@ function DropDownList({ list, show, translateDown }) {
   }, [show]);
 
   const style = {
-    transform: `translateY(${translateDown})`,
+    transform: `translateY(calc(50% + ${translateDown}))`,
   };
 
   return (

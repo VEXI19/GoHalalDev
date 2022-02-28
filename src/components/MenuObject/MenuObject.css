@@ -1,6 +1,7 @@
 .MenuObject {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
@@ -18,16 +19,13 @@
   /* margin-left: 15px; */
 }
 
-.MenuObjectContainer > img {
-  width: 1px;
-}
-
 .MenuObjectContainer > div > img:nth-child(n) {
-  padding-right: 10px;
-  width: 20px;
+  padding-right: min(4vw, 10px);
+  width: min(4vw, 20px);
 }
 
 .MenuObjectContainer > div > span {
   color: white;
+  font-size: min(4vw, 16px);
   font-family: "Maven Pro", sans-serif;
 }

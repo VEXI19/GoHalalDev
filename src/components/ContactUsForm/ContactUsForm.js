@@ -63,15 +63,23 @@ function ContactUsForm(props) {
     <div className="ContactUsForm">
       <div
         className="ContactUsRow"
-        // style={
-        //   windowWitdth <= 600
-        //     ? { flexDirection: "column", height: "180px" }
-        //     : { flexDirection: "row", height: "60px" }
-        // }
+        style={
+          windowWitdth <= 600
+            ? { flexDirection: "column" }
+            : { flexDirection: "row" }
+        }
       >
-        <div className="ContactUsDropDown">
+        <div
+          className={
+            windowWitdth <= 600 ? "ContactUsDropDown2" : "ContactUsDropDown"
+          }
+        >
           <div
-            className="ContactUsDrowDownHeader"
+            className={
+              windowWitdth <= 600
+                ? "ContactUsDrowDownHeader2"
+                : "ContactUsDrowDownHeader"
+            }
             onClick={() => {
               setGenderShow(!genderShow);
             }}
@@ -82,7 +90,13 @@ function ContactUsForm(props) {
             </div>
           </div>
           {genderShow && (
-            <div className="ContactUsDrowDownOptions">
+            <div
+              className={
+                windowWitdth <= 600
+                  ? "ContactUsDrowDownOptions2"
+                  : "ContactUsDrowDownOptions"
+              }
+            >
               {genderArray.map((elem, index) => {
                 return (
                   <span
@@ -102,14 +116,32 @@ function ContactUsForm(props) {
           )}
         </div>
         <input
-          className="ContactFormInput extraMargin"
+          className={
+            windowWitdth <= 600
+              ? "ContactFormInput"
+              : "ContactFormInput extraMargin"
+          }
           id="First name"
+          style={
+            windowWitdth <= 600
+              ? { marginTop: "min(3vw, 20px)" }
+              : { marginTop: "0", width: "100%" }
+          }
           placeholder="First Name"
           onChange={(obj) => setFirstName(obj.currentTarget.value)}
         />
         <input
-          className="ContactFormInput extraMargin"
+          className={
+            windowWitdth <= 600
+              ? "ContactFormInput"
+              : "ContactFormInput extraMargin"
+          }
           id="Last name"
+          style={
+            windowWitdth <= 600
+              ? { marginTop: "min(3vw, 20px)" }
+              : { marginTop: "0", width: "100%" }
+          }
           placeholder="Last Name"
           onChange={(obj) => setLastName(obj.currentTarget.value)}
         />

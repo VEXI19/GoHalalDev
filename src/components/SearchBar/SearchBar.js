@@ -6,12 +6,6 @@ import searchButton from "../../icons/GroupsearchButton.svg";
 function SearchBar({ isCategories = true, placeholder, button = "" }) {
   const Categories = ["All Categories", "Meat", "Vegies", "Fruits", "Milk"];
 
-  var buttonWidth = "60px";
-
-  if (button !== "") {
-    buttonWidth = "max-content";
-  }
-
   return (
     <div className="SearchBar">
       <form action="/" method="get">
@@ -27,20 +21,16 @@ function SearchBar({ isCategories = true, placeholder, button = "" }) {
               />
             </>
           )}
-          <button style={{ width: buttonWidth }}>
-            {button && (
-              <span
-                style={{
-                  fontFamily: '"Maven Pro", sans-serif',
-                  color: "white",
-                  fontSize: "15px",
-                  padding: "10px",
-                }}
-              >
-                {button}
-              </span>
+          <button>
+            {button && <span>{button}</span>}
+
+            {!button && (
+              <img
+                style={{ width: "min(4vw, 25px)", padding: "1vw" }}
+                src={searchButton}
+                alt=""
+              />
             )}
-            {!button && <img src={searchButton} alt="" />}
           </button>
         </div>
       </form>

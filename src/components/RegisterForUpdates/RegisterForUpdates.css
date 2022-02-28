@@ -8,7 +8,7 @@
 .RegisterForUpdatesContainer {
   max-width: 1500px;
   width: 90%;
-  padding: 20px;
+  padding: min(10%, 20px);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,15 +43,18 @@
 .RegisterForUpdatesHeader > span {
   font-family: "Maven Pro", sans-serif;
   color: white;
-  font-size: 20px;
+  font-size: min(4vw, 20px);
   margin-left: 10px;
 }
 
+.RegisterForUpdatesHeader > img {
+  height: min(7vw, 25px);
+}
+
 .InputContainer {
-  height: 20px;
+  height: min(6vw, 40px);
   max-width: 400px;
   width: 100%;
-  background-color: red;
 }
 
 .InputContainer > button {
@@ -59,11 +62,11 @@
   width: fit-content;
   height: 100%;
   border: none;
+  padding: min(5vw, 10px);
   white-space: nowrap;
   font-family: "Maven Pro", sans-serif;
   color: white;
-  padding: 20px;
-  font-size: 20px;
+  font-size: min(3vw, 16px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,12 +74,16 @@
 
 .InputContainer > input {
   border: none;
-  padding: 10px;
+  /* padding: 10px; */
   max-width: 250px;
   width: 100%;
   height: 100%;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
   font-family: "Maven Pro", sans-serif;
-  font-size: 17px;
+  font-size: min(3vw, 16px);
 }
 
 .ContactFormInput > input::placeholder {

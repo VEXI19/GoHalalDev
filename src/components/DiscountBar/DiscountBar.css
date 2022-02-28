@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .DiscbountBarContainer {
@@ -28,48 +27,6 @@
   width: 100%;
   height: 130%;
   justify-content: space-between;
-}
-
-.DiscountBarRow > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-}
-
-.DiscountBarRow > div:hover {
-  cursor: pointer;
-}
-
-.DiscountBarRow > div > span {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Maven Pro", sans-serif;
-}
-
-.DiscountBarRow > div > div > span {
-  font-size: 18px;
-  color: #115c07;
-  font-weight: bold;
-  font-family: "Maven Pro", sans-serif;
-}
-
-.DiscountBarRow > div > img {
-  padding-right: 10px;
-}
-
-.DiscountBarRow > div > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: fit-content;
-  height: 100%;
-}
-
-.DiscountBarRow > div > div > div {
-  background-color: #115c07;
-  width: 100%;
-  height: 3px;
 }
 
 .spaceAround {

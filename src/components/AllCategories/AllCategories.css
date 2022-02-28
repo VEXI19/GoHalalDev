@@ -1,0 +1,23 @@
+.AllCategories {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.AllCategories > div {
+  max-width: 1500px;
+  width: 90%;
+  height: 100%;
+  background-color: rgb(224, 224, 224);
+}
+
+.AllCategoriesConatiner {
+  display: grid;
+  /* grid-auto-flow: row; */
+  grid-auto-rows: auto;
+  gap: 2px;
+  width: 100%;
+}

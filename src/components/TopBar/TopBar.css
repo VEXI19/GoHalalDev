@@ -27,12 +27,16 @@
   flex-direction: column;
   align-items: center;
   background-color: #115c07;
-  padding-bottom: 20px;
+  padding-bottom: min(5%, 20px);
   transition: all ease 0.3s;
 }
 
 #dropDownMenuIcon:hover {
   cursor: pointer;
+}
+
+#dropDownMenuIcon {
+  width: min(4vw, 25px);
 }
 
 .TopBarLeftSide {

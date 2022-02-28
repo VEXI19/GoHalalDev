@@ -4,7 +4,7 @@ import AuthenticityCheck from "../../icons/Group (1).svg";
 import ReturnPolicy from "../../icons/Group 5064.svg";
 import SecurePayment from "../../icons/Group 3159.svg";
 import DedicatedCustomerSupport from "../../icons/Group 5056.svg";
-import WeeklyOffers from "../../icons/Group (4).svg";
+import WeeklyOffers from "../../icons/Weekly Offers.svg";
 import { getTranslation } from "../../Utils/getLanguage";
 
 function Pros(props) {
@@ -36,31 +36,33 @@ function Pros(props) {
     },
   ];
 
-  const [windowWidth, setWindowWidth] = React.useState(null);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
-    if (window.innerWidth <= 920) {
-      document.getElementById("ProsContainer").style.flexDirection = "column";
-      //   document.getElementById("SinglePro").style.paddingTop = "60px";
-      //   document.getElementById("SinglePro").style.paddingBottom = "60px";
-    } else {
-      document.getElementById("ProsContainer").style.flexDirection = "row";
-      //   document.getElementById("SinglePro").style.paddingTop = "80px";
-      //   document.getElementById("SinglePro").style.paddingBottom = "80px";
-    }
   });
 
   return (
     <div className="Pros">
-      <div className="ProsContainer" id="ProsContainer">
+      <div
+        className="ProsContainer"
+        id="ProsContainer"
+        style={
+          windowWidth <= 920
+            ? { flexDirection: "column" }
+            : { flexDirection: "row" }
+        }
+      >
         {tabs.map((elem, index) => (
           <div
             key={index}
             className="SinglePro"
             style={
               windowWidth <= 920
-                ? { paddingTop: "40px", paddingBottom: "40px" }
+                ? {
+                    paddingTop: "min(4vw, 40px)",
+                    paddingBottom: "min(4vw, 40px)",
+                  }
                 : { paddingTop: "80px", paddingBottom: "80px" }
             }
           >

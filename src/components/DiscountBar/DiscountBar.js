@@ -8,6 +8,8 @@ import GoHalalFamily from "../../icons/VectorGoHalalFamily.svg";
 import GiftCards from "../../icons/GroupGiftcards.svg";
 import Zakat from "../../icons/GroupZakat.svg";
 import Blog from "../../icons/GroupBlog.svg";
+import DiscountButton from "../DiscountButton/DiscountButton";
+import AllCategories from "../AllCategories/AllCategories";
 
 function DiscountBar(props) {
   const tabs = {
@@ -62,118 +64,39 @@ function DiscountBar(props) {
       <div
         className="DiscbountBarContainer"
         style={
-          windowWitdth <= 1250
-            ? { marginBottom: "20px", marginTop: "10px" }
-            : { marginBottom: "0", marginTop: "0" }
+          windowWitdth >= 1200 ? { marginTop: "20px" } : { marginTop: "0" }
         }
       >
-        {windowWitdth > 1250 && (
-          <div className="DiscountBarRow">
-            {tabs.allRows.map((elem, index) => {
-              return (
-                <div onClick={() => console.log(elem.text)} key={index}>
-                  <img src={elem.icon} alt="" />
-                  {index !== 0 && (
-                    <span id={"discount" + index}>{elem.text}</span>
-                  )}
-
-                  {index === 0 && (
-                    <div>
-                      <span id={"discount" + index}>{elem.text}</span>
-                      <div />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        )}
-        {windowWitdth <= 1250 && windowWitdth > 750 && (
-          <div className="DiscountBarRowsContainer">
+        {/* {windowWitdth > 1250 && ( */}
+        <div className="DiscountBarRow">
+          {tabs.allRows.map((elem, index) => {
+            return (
+              <DiscountButton
+                paddingRight={
+                  index === tabs.allRows.length - 1 ? "0" : "min(4vw, 10px)"
+                }
+                paddingLeft={index === 0 ? "0" : "min(4vw, 10px)"}
+                elem={elem}
+                key={index}
+              />
+            );
+          })}
+        </div>
+        {/* )} */}
+        {/* {windowWitdth <= 1250 && windowWitdth > 750 && (
+          <div className="DiscbountBarContainer">
             <div className="DiscountBarRow">
               {tabs.row1.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    {index !== 0 && (
-                      <span id={"discount" + index}>{elem.text}</span>
-                    )}
-
-                    {index === 0 && (
-                      <div>
-                        <span id={"discount" + index}>{elem.text}</span>
-                        <div />
-                      </div>
-                    )}
-                  </div>
-                );
+                return <DiscountButton elem={elem} key={index} />;
               })}
             </div>
-            <div className="DiscountBarRow">
+            <div className="DiscountButton">
               {tabs.row2.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    <span id={"discount" + index}>{elem.text}</span>
-                  </div>
-                );
+                return <DiscountButton elem={elem} key={index} />;
               })}
             </div>
           </div>
-        )}
-        {windowWitdth <= 750 && (
-          <div className="DiscountBarRowsContainer">
-            <div className="DiscountBarRow spaceAround">
-              {tabs.row3.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    {index !== 0 && (
-                      <span id={"discount" + index}>{elem.text}</span>
-                    )}
-
-                    {index === 0 && (
-                      <div>
-                        <span id={"discount" + index}>{elem.text}</span>
-                        <div />
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            <div className="DiscountBarRow spaceAround">
-              {tabs.row4.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    <span id={"discount" + index}>{elem.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="DiscountBarRow spaceAround">
-              {tabs.row5.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    <span id={"discount" + index}>{elem.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="DiscountBarRow spaceAround">
-              {tabs.row6.map((elem, index) => {
-                return (
-                  <div onClick={() => console.log(elem.text)} key={index}>
-                    <img src={elem.icon} alt="" />
-                    <span id={"discount" + index}>{elem.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        )} */}
       </div>
     </div>
   );

@@ -22,27 +22,27 @@
   padding-bottom: 80px; */
   margin-left: 20px;
   margin-right: 20px;
+  width: 100%;
 }
 
 .SinglePro > img {
-  max-height: 110px;
-  min-height: 90px;
+  max-height: min(20vw, 110px);
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: min(5vw, 30px);
 }
 
 .ProsText {
   font-family: "Maven Pro", sans-serif;
   color: black;
-  font-size: 16px;
+  font-size: min(3vw, 16px);
   text-align: center;
 }
 
 .ProsHeader {
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: min(3vw, 18px);
   color: #115c07;
-  font-size: 20px;
+  font-size: min(5vw, 20px);
   text-align: center;
 }

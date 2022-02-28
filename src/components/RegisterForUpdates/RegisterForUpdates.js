@@ -6,12 +6,14 @@ import Facebook from "../../icons/Vector (5).svg";
 import Twitter from "../../icons/Vector (6).svg";
 import Linkdin from "../../icons/Vector (7).svg";
 import YouTube from "../../icons/Vector (8).svg";
+import PopUpThankYou from "../PopUpThankYou/PopUpThankYou";
 
 function RegisterForUpdates(props) {
   const [windowWidth, setWindowWidth] = React.useState(null);
 
   const [email, setEmail] = React.useState(null);
   const [buttonHover, setButtonHover] = React.useState(false);
+  const [thankYouPopUpShow, setThankYouPopUpShow] = React.useState(false);
 
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
@@ -26,8 +28,19 @@ function RegisterForUpdates(props) {
     console.log(email);
   };
 
+  const handleClose = () => {
+    setThankYouPopUpShow(!thankYouPopUpShow);
+  };
+
   return (
     <div className="RegisterForUpdates">
+      {thankYouPopUpShow && (
+        <PopUpThankYou
+          headerText="Thank you for subscribing the offers and update !"
+          link="www.youtube.com"
+          handleClose={handleClose}
+        />
+      )}
       <div
         className="RegisterForUpdatesContainer"
         style={
@@ -49,12 +62,10 @@ function RegisterForUpdates(props) {
           style={
             windowWidth <= 750
               ? {
-                  marginTop: "30px",
-                  marginBottom: "10px",
+                  marginTop: "min(5vw, 15%)",
                 }
               : {
                   marginTop: "0",
-                  marginBottom: "0",
                 }
           }
         >
@@ -74,7 +85,10 @@ function RegisterForUpdates(props) {
                 ? { backgroundColor: "#0e3f07", cursor: "pointer" }
                 : { backgroundColor: "#115c07", cursor: "pointer" }
             }
-            onClick={() => handleSubmit()}
+            onClick={() => {
+              handleSubmit();
+              setThankYouPopUpShow(true);
+            }}
           >
             {getTranslation("Register Now")}
           </button>

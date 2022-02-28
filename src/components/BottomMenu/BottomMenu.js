@@ -68,8 +68,10 @@ function BottomMenu(props) {
           className="VerticalDiv LongDiv"
           style={
             (windowWidth <= 1500) & (windowWidth >= 650)
-              ? { marginBottom: "30px" }
-              : { marginBottom: "0" }
+              ? { marginBottom: "30px", marginRight: "0" }
+              : windowWidth >= 1500
+              ? { marginBottom: "0", marginRight: "40px" }
+              : { marginBottom: "0", marginRight: "0px" }
           }
         >
           <span className="BottomMenuHeader">
@@ -113,7 +115,9 @@ function BottomMenu(props) {
           <div
             className="VerticalDiv ListDiv"
             style={
-              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+              windowWidth <= 650
+                ? { marginTop: "min(30%,40px)" }
+                : { marginTop: "0" }
             }
           >
             <span className="BottomMenuHeader">
@@ -134,7 +138,9 @@ function BottomMenu(props) {
           <div
             className="VerticalDiv ListDiv"
             style={
-              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+              windowWidth <= 650
+                ? { marginTop: "min(10%, 40px)" }
+                : { marginTop: "0" }
             }
           >
             <span className="BottomMenuHeader">

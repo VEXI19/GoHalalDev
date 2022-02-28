@@ -5,34 +5,38 @@ import { getTranslation } from "./../../Utils/getLanguage";
 
 function WhyGoHalal(props) {
   window.addEventListener("resize", () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1250) {
       document.getElementById("WhyGoHalal").style.flexDirection = "column";
       document.getElementById("WhyGoHalalText").style.textAlign = "center";
       // document.getElementById("WhyGoHalalRightSide").style.width = "90%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "90%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "30px";
+      document.getElementById("WhyGoHalal").style.width = "60%";
     } else {
       document.getElementById("WhyGoHalal").style.flexDirection = "row";
       document.getElementById("WhyGoHalalText").style.textAlign = "left";
       // document.getElementById("WhyGoHalalRightSide").style.width = "40%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "40%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "0px";
+      document.getElementById("WhyGoHalal").style.width = "90%";
     }
   });
 
   React.useEffect(() => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1250) {
       document.getElementById("WhyGoHalal").style.flexDirection = "column";
       document.getElementById("WhyGoHalalText").style.textAlign = "center";
       // document.getElementById("WhyGoHalalRightSide").style.width = "90%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "90%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "30px";
+      document.getElementById("WhyGoHalal").style.width = "60%";
     } else {
       document.getElementById("WhyGoHalal").style.flexDirection = "row";
       document.getElementById("WhyGoHalalText").style.textAlign = "left";
       // document.getElementById("WhyGoHalalRightSide").style.width = "40%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "40%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "0px";
+      document.getElementById("WhyGoHalal").style.width = "90%";
     }
   }, []);
 

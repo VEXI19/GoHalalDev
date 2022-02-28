@@ -2,6 +2,7 @@ import React from "react";
 import { getTranslation } from "../../Utils/getLanguage";
 import "./Newsteller.css";
 import ReCAPTCHA from "react-google-recaptcha";
+import PopUpThankYou from "../PopUpThankYou/PopUpThankYou";
 
 function Newsletter(props) {
   const [checkBox, setCheckBox] = React.useState(false);
@@ -25,6 +26,8 @@ function Newsletter(props) {
   const [lastName, setLastName] = React.useState(null);
   const [email, setEmail] = React.useState(null);
 
+  const [thankYouPopUpShow, setThankYouPopUpShow] = React.useState(false);
+
   const [buttonHover, setButtonHover] = React.useState(false);
 
   var buttonDisabled = firstName && lastName && email && checkBox && recaptcha;
@@ -37,9 +40,23 @@ function Newsletter(props) {
     setWindowWidth(window.innerWidth);
   }, []);
 
+  const handleClose = () => {
+    setThankYouPopUpShow(!thankYouPopUpShow);
+  };
+
   return (
     <div className="Newsletter">
-      <div className="NewsletterContainer">
+      {thankYouPopUpShow && (
+        <PopUpThankYou
+          headerText="Thank you for subscribing the offers and update!"
+          link="www.youtube.com"
+          handleClose={handleClose}
+        />
+      )}
+      <div
+        className="NewsletterContainer"
+        style={windowWidth <= 550 ? { width: "80%" } : { width: "90%" }}
+      >
         <span className="NewsletterHeader">
           {getTranslation("Register for offers and updates")}
         </span>
@@ -141,7 +158,10 @@ function Newsletter(props) {
               ? { backgroundColor: "#0e3f07", cursor: "pointer" }
               : { backgroundColor: "#115c07", cursor: "pointer" }
           }
-          onClick={() => submitForm()}
+          onClick={() => {
+            submitForm();
+            setThankYouPopUpShow(true);
+          }}
         >
           {getTranslation("Subscribe")}
         </button>

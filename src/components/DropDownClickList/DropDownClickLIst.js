@@ -7,6 +7,14 @@ function DropDownClickList({ categories, placeholder }) {
   const [open, setOpen] = React.useState(false);
 
   const AllCategories = React.useRef(null);
+  window.addEventListener("click", (event) => {
+    if (
+      event.target.className !== "DropDownClickListHeader" &&
+      event.target.className !== "CategoriesElement"
+    ) {
+      setOpen(false);
+    }
+  });
 
   return (
     <div className="DropDownClickList">
@@ -17,11 +25,20 @@ function DropDownClickList({ categories, placeholder }) {
         onClick={() => setOpen(!open)}
         className="DropDownClickListHeader"
       >
-        <span ref={AllCategories} id="AllCategories">
+        <span
+          style={{ pointerEvents: "none" }}
+          ref={AllCategories}
+          id="AllCategories"
+        >
           {placeholder}
         </span>
-        <div>
-          <img id="arrow" src={!open ? downArrow : upArrow} alt="" />
+        <div style={{ pointerEvents: "none" }}>
+          <img
+            style={{ pointerEvents: "none" }}
+            id="arrow"
+            src={!open ? downArrow : upArrow}
+            alt=""
+          />
         </div>
       </div>
       {open && (
@@ -34,11 +51,17 @@ function DropDownClickList({ categories, placeholder }) {
                   AllCategories.current.innerHTML = elem;
                   setOpen(false);
                 }}
+                className="CategoriesElement"
                 key={index}
               >
-                <span key={index}>{elem}</span>
+                <span style={{ pointerEvents: "none" }} key={index}>
+                  {elem}
+                </span>
                 {index !== categories.length - 1 && (
-                  <div className="divider"></div>
+                  <div
+                    style={{ pointerEvents: "none" }}
+                    className="divider"
+                  ></div>
                 )}
               </div>
             );

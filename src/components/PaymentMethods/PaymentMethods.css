@@ -3,16 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 80px;
+  padding-top: min(7%, 30px);
+  padding-bottom: min(10%, 80px);
 }
 
 .PaymentMethods > span {
   font-family: "Maven Pro", sans-serif;
   color: black;
-  font-size: 40px;
+  font-size: min(8vw, 40px);
   font-weight: bold;
-  margin-bottom: 90px;
+  margin-bottom: min(15vw, 90px);
 }
 
 .PaymentMethods > div {
@@ -30,9 +30,9 @@
 }
 
 .PaymentMethods > div > div > img {
-  max-height: 90px;
+  max-height: min(15vw, 90px);
   height: 100%;
-  max-width: 90%;
+  max-width: min(50vw, 80%);
   object-fit: contain;
   width: auto;
   resize: both;
