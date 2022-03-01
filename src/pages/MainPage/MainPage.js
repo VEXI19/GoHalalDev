@@ -24,15 +24,14 @@ import "./MainPage.css";
 // import { Link } from "react-router-dom";
 
 function MainPage(props) {
-  const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
+  // const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
 
-  window.addEventListener("resize", () => setWindowWitdth(window.innerWidth));
+  // window.addEventListener("resize", () => setWindowWitdth(window.innerWidth));
 
   return (
     <div className="MainPage">
       <TopBar />
       <MainControlBar />
-      {windowWitdth <= 1200 && <LongDevider />}
       <DiscountBar />
       <LongDevider />
       <CategoriesBar />

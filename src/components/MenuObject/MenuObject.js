@@ -16,15 +16,6 @@ function MenuObject({
 }) {
   const [hover, setHover] = React.useState(false);
 
-  React.useEffect(() => {
-    const menu = document.getElementById("menuObjectContainer" + id);
-    if (shortVersion) {
-      menu.style.padding = "min(1vw, 5px)";
-    } else {
-      menu.style.padding = "0px";
-    }
-  }, [shortVersion, id]);
-
   return (
     <div
       className="MenuObject"
@@ -32,11 +23,12 @@ function MenuObject({
       onMouseEnter={() => {
         setHover(true);
 
-        if (clickable) {
+        if (clickable && !shortVersion) {
           const img = document.getElementById("icon" + id);
           const text = document.getElementById("text" + id);
           const menu = document.getElementById("menuObjectContainer" + id);
-          img.style.color = "grey";
+          img.style.filter =
+            "brightness(0) saturate(100%) invert(80%) sepia(4%) saturate(42%) hue-rotate(320deg) brightness(91%) contrast(82%)";
           text.style.color = "grey";
           menu.style.cursor = "pointer";
         }
@@ -45,14 +37,36 @@ function MenuObject({
         setHover(false);
         const img = document.getElementById("icon" + id);
         const text = document.getElementById("text" + id);
-        img.style.color = "white";
+        img.style.filter = "";
         text.style.color = "white";
       }}
     >
       <div className="MenuObjectContainer" id={"menuObjectContainer" + id}>
-        <div>
-          <img id={"icon" + id} src={icon} alt="" />
+        <div
+          className={shortVersion ? "ShortVersion" : ""}
+          style={
+            shortVersion
+              ? { flexDirection: "row-reverse" }
+              : { flexDirection: "row" }
+          }
+        >
+          <img
+            id={"icon" + id}
+            style={
+              shortVersion
+                ? {
+                    paddingLeft: "min(4vw, 10px)",
+                  }
+                : {
+                    paddingLeft: "min(4vw, 10px)",
+                    paddingRight: "min(4vw, 10px)",
+                  }
+            }
+            src={icon}
+            alt=""
+          />
           <span
+            className={shortVersion ? "ShortVersionSpan" : ""}
             style={
               isVerticalLine ? { paddingRight: "10px" } : { paddingRight: "0" }
             }

@@ -73,7 +73,7 @@
 }
 
 .Categories > div > span {
-  padding: min(4vw, 15px);
+  padding: 1em 2em;
 }
 
 .divider {

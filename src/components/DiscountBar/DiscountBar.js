@@ -3,13 +3,12 @@ import "./DiscountBar.css";
 import Discounts from "../../icons/GroupDiscounts.svg";
 import Bio from "../../icons/GroupBio.svg";
 import Products from "../../icons/GroupNewProducts.svg";
+import GiftCards from "../../icons/GroupGiftcards.svg";
 import Recipes from "../../icons/GroupRecipies.svg";
 import GoHalalFamily from "../../icons/VectorGoHalalFamily.svg";
-import GiftCards from "../../icons/GroupGiftcards.svg";
 import Zakat from "../../icons/GroupZakat.svg";
 import Blog from "../../icons/GroupBlog.svg";
 import DiscountButton from "../DiscountButton/DiscountButton";
-import AllCategories from "../AllCategories/AllCategories";
 
 function DiscountBar(props) {
   const tabs = {

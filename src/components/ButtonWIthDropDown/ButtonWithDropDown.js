@@ -16,8 +16,14 @@ function ButtonWithDropDown({ elem }) {
       }}
       onClick={() => console.log(elem.text)}
     >
-      <img src={elem.icon} alt=""></img>
-      <span>{elem.text}</span>
+      <img
+        style={showDropDown ? { filter: "var(--dark-green-filter)" } : {}}
+        src={elem.icon}
+        alt=""
+      ></img>
+      <span style={showDropDown ? { color: "var(--dark-green)" } : {}}>
+        {elem.text}
+      </span>
       <DropDownList
         id="DropDownList"
         translateDown="min(7vw, 35px)"

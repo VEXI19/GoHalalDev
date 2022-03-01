@@ -4,6 +4,12 @@
   justify-content: center;
 }
 
+@media (max-width: 1200px) {
+  .DiscountBar {
+    display: none;
+  }
+}
+
 .DiscbountBarContainer {
   max-width: 1500px;
   width: 95%;

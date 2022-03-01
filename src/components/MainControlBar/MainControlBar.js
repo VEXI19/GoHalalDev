@@ -128,33 +128,12 @@ function MainControlBar(props) {
               }
               className="logo"
             >
-              <img
-                // style={
-                //   windowWitdth <= 570
-                //     ? {
-                //         width: "150px",
-                //         height: "150px",
-                //       }
-                //     : { width: "90px", height: "90px" }
-                // }
-                src={logo}
-                alt=""
-              />
+              <img src={logo} alt="" />
             </div>
           )}
 
-          <div
-            className="SearchBarContainer"
-            // style={
-            //   windowWitdth <= 570
-            //     ? { marginLeft: "0px" }
-            //     : { marginLeft: "30px" }
-            // }
-          >
-            <SearchBar
-              // isCategories={windowWitdth >= 500}
-              placeholder="I'm searching for"
-            />
+          <div className="SearchBarContainer">
+            <SearchBar placeholder="I'm searching for" />
             {windowWitdth >= 700 && (
               <div className="Regional">
                 <span>Regional:</span>

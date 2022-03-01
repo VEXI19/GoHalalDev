@@ -23,12 +23,28 @@
 }
 
 .TopBarDropDownMenu {
+  position: absolute;
+  right: 0;
+  height: 100vh;
   display: flex;
+  width: fit-content;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
   background-color: #115c07;
   padding-bottom: min(5%, 20px);
   transition: all ease 0.3s;
+  animation: slide 0.2s ease;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.TopBarDropDownMenu > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 #dropDownMenuIcon:hover {
@@ -43,4 +59,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

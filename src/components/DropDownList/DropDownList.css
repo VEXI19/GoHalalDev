@@ -35,7 +35,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: min(3vw, 15px);
+  padding: 1em;
 }
 
 .DropDownListContainer > div > div:hover {

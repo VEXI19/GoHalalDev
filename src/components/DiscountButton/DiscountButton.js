@@ -16,8 +16,7 @@ function DiscountButton({ elem, paddingLeft, paddingRight }) {
         style={
           hover
             ? {
-                filter:
-                  "brightness(0) saturate(100%) invert(20%) sepia(68%) saturate(2052%) hue-rotate(83deg) brightness(97%) contrast(94%)",
+                filter: "var(--dark-green-filter)",
               }
             : {}
         }
@@ -29,7 +28,13 @@ function DiscountButton({ elem, paddingLeft, paddingRight }) {
         <span style={hover ? { color: "#115c07" } : { color: "black" }}>
           {elem.text}
         </span>
-        {hover && <div />}
+        <div
+          style={
+            hover
+              ? { backgroundColor: "var(--dark-green)" }
+              : { backgroundColor: "transparent" }
+          }
+        />
       </div>
     </div>
   );
