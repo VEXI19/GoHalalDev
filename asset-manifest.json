@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GoHalalDev/static/css/main.c31173e9.css",
-    "main.js": "/GoHalalDev/static/js/main.b637cf1c.js",
+    "main.css": "/GoHalalDev/static/css/main.a93379bc.css",
+    "main.js": "/GoHalalDev/static/js/main.021d5259.js",
     "static/media/Group 2331founder.svg": "/GoHalalDev/static/media/Group 2331founder.5a93a82ba85ece65e9a811b8fbb7d6b9.svg",
     "static/media/Package 1MadeBetter.svg": "/GoHalalDev/static/media/Package 1MadeBetter.a2d8efb363a6493de385a5f6fdc1c4bb.svg",
     "static/media/Group 5019backgroundComingSoon (1).png": "/GoHalalDev/static/media/Group 5019backgroundComingSoon (1).dd140c6679ce2643a78a.png",
@@ -118,11 +118,11 @@
     "static/media/icons8-menu.svg": "/GoHalalDev/static/media/icons8-menu.151ef2b70c060f0ed4956ce988930ed3.svg",
     "static/media/Line 164Line.svg": "/GoHalalDev/static/media/Line 164Line.f4671cb895ea96255154d2a5c60cac25.svg",
     "static/media/rightArrow.svg": "/GoHalalDev/static/media/rightArrow.e13f23e5b26d2fd4ce9903f5404e5de8.svg",
-    "main.c31173e9.css.map": "/GoHalalDev/static/css/main.c31173e9.css.map",
-    "main.b637cf1c.js.map": "/GoHalalDev/static/js/main.b637cf1c.js.map"
+    "main.a93379bc.css.map": "/GoHalalDev/static/css/main.a93379bc.css.map",
+    "main.021d5259.js.map": "/GoHalalDev/static/js/main.021d5259.js.map"
   },
   "entrypoints": [
-    "static/css/main.c31173e9.css",
-    "static/js/main.b637cf1c.js"
+    "static/css/main.a93379bc.css",
+    "static/js/main.021d5259.js"
   ]
 }
