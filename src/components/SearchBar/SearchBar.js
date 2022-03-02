@@ -22,7 +22,7 @@ function SearchBar({ isCategories = true, placeholder, button = "" }) {
             </>
           )}
           <button>
-            {button && <span>{button}</span>}
+            {button && <span style={{ padding: "0.5em 1em" }}>{button}</span>}
 
             {!button && (
               <img

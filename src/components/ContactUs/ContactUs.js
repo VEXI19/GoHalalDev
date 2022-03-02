@@ -46,7 +46,7 @@ function ContactUs(props) {
             <img src={ContactUsIcon} alt="" />
             <div className="RowText">
               <img src={Phone} alt="" />
-              <div>
+              <div style={{ width: "80%" }}>
                 <span>{getTranslation("Hotline (Mo. -Sa. 8 -20 Hrs.) ")}</span>
                 <span style={{ whiteSpace: "nowrap" }}>
                   {getTranslation("+49 - 8161 - 5193561")}
@@ -55,13 +55,13 @@ function ContactUs(props) {
             </div>
             <div>
               <img src={Address} alt="" />
-              <span>
+              <span style={{ width: "80%" }}>
                 {getTranslation("Ganzenmüllerstraße 27 85354 Freising Germany")}
               </span>
             </div>
             <div>
               <img src={Mail} alt="" />
-              <span>support@gohalalshop.com</span>
+              <span style={{ width: "90%" }}>support@gohalalshop.com</span>
             </div>
           </div>
         </div>

@@ -8,8 +8,8 @@
 .CertifiedHalalContainer {
   max-width: 1500px;
   width: 90%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5em;
+  padding-bottom: 5em;
   display: flex;
   flex-direction: row;
   align-items: center;

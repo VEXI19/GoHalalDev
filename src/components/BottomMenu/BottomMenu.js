@@ -116,7 +116,7 @@ function BottomMenu(props) {
             className="VerticalDiv ListDiv"
             style={
               windowWidth <= 650
-                ? { marginTop: "min(30%,40px)" }
+                ? { marginTop: "clamp(0.5em, 5vw, 1.5em )" }
                 : { marginTop: "0" }
             }
           >
@@ -127,7 +127,7 @@ function BottomMenu(props) {
               return (
                 <span
                   onClick={() => console.log(elem)}
-                  className="BottomMenuText"
+                  className="BottomMenuText paddingTopShortVersion"
                   key={index}
                 >
                   {getTranslation(elem)}
@@ -139,7 +139,7 @@ function BottomMenu(props) {
             className="VerticalDiv ListDiv"
             style={
               windowWidth <= 650
-                ? { marginTop: "min(10%, 40px)" }
+                ? { marginTop: "clamp(0.5em, 5vw, 1.5em )" }
                 : { marginTop: "0" }
             }
           >
@@ -150,7 +150,7 @@ function BottomMenu(props) {
               return (
                 <span
                   onClick={() => console.log(elem)}
-                  className="BottomMenuText"
+                  className="BottomMenuText paddingTopShortVersion"
                   key={index}
                 >
                   {getTranslation(elem)}
@@ -161,7 +161,9 @@ function BottomMenu(props) {
           <div
             className="VerticalDiv ListDiv"
             style={
-              windowWidth <= 650 ? { marginTop: "40px" } : { marginTop: "0" }
+              windowWidth <= 650
+                ? { marginTop: "clamp(0.5em, 5vw, 1.5em )" }
+                : { marginTop: "0" }
             }
           >
             <span className="BottomMenuHeader">
@@ -171,14 +173,14 @@ function BottomMenu(props) {
               return (
                 <span
                   onClick={() => console.log(elem)}
-                  className="BottomMenuText"
+                  className="BottomMenuText paddingTopShortVersion"
                   key={index}
                 >
                   {getTranslation(elem)}
                 </span>
               );
             })}
-            <div style={{ height: "50px" }}>
+            <div style={{ backgroundColor: "aqua", marginTop: "0.5em" }}>
               <div className="LanguageDropDown">
                 <div
                   className="LanguageDropDownHeader"

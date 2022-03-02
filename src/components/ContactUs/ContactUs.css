@@ -17,12 +17,12 @@
 
 .ContactUsHeader {
   color: #115c07;
-  font-size: min(6vw, 40px);
+  font-size: min(7vw, 40px);
   margin-bottom: 20px;
 }
 
 .ContactUsText {
-  font-size: min(4vw, 25px);
+  font-size: min(5vw, 25px);
   color: black;
   margin-bottom: min(15vw, 50px);
 }
@@ -54,7 +54,7 @@
   width: 100%;
   display: flex;
   font-family: "Maven Pro", sans-serif;
-  font-size: min(2.5vw, 18px);
+  font-size: min(3.5vw, 18px);
   flex-direction: row;
   align-items: center;
   margin-top: min(4vw, 15px);

@@ -68,7 +68,7 @@
 .AgreamentTextContainer > span {
   font-family: "Maven Pro", sans-serif;
   color: black;
-  font-size: min(2vw, 14px);
+  font-size: min(2.5vw, 14px);
 
   word-wrap: break-word;
 }
@@ -80,7 +80,7 @@
   border: none;
   font-family: "Maven Pro", sans-serif;
   color: white;
-  padding: min(2vw, 15px);
+  padding: 0.8em 1.5em;
   font-size: min(4vw, 25px);
 }
 

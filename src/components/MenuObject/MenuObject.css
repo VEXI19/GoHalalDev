@@ -26,6 +26,7 @@
   justify-content: space-between;
   border-radius: 5px;
   margin: 1px 0;
+  cursor: pointer;
 }
 
 .ShortVersion:hover {

@@ -4,6 +4,17 @@
     saturate(2052%) hue-rotate(83deg) brightness(97%) contrast(94%);
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green);
+  border-radius: 1em;
+  border: 0.2vw solid white;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: clamp(8px, 1.2vw, 15px);
+}
+
 body {
   margin: 0;
   font-family: "Maven Pro", sans-serif, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",

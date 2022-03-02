@@ -20,7 +20,7 @@
   height: 100%;
   border: none;
 
-  padding: min(1vw, 10px);
+  /* padding: min(1vw, 10px); */
   background-color: transparent;
   padding-left: min(3vw, 10px);
   padding-right: min(3vw, 10px);
