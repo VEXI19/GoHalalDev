@@ -43,6 +43,7 @@
   /* color: #afafaf; */
   color: white;
   font-size: min(4vw, 16px);
+  white-space: nowrap;
   font-family: "Maven Pro", sans-serif;
 }
 

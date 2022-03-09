@@ -1,9 +1,10 @@
 import React from "react";
+import DropDownListElement from "../DropDownListElement/DropDownListElement";
 import "./DropDownList.css";
-import rightArrow from "../../icons/rightArrow.svg";
 
 function DropDownList({ list, show, translateDown }) {
   const [hover, setHover] = React.useState(show);
+  const [hoverElement, setHoverElement] = React.useState(false);
   React.useEffect(() => {
     setHover(show);
   }, [show]);
@@ -26,20 +27,7 @@ function DropDownList({ list, show, translateDown }) {
           }}
         >
           {list.map((elem, index) => {
-            return (
-              <div onClick={() => console.log(elem.text)} key={index}>
-                <div>
-                  <div>
-                    <img src={elem.icon} alt="" />
-                    <span>{elem.text}</span>
-                  </div>
-                  <img id="rightArrow" src={rightArrow} alt="" />
-                </div>
-                {/* <div>
-                  <div className="DropDownListDevider"></div>
-                </div> */}
-              </div>
-            );
+            return <DropDownListElement elem={elem} key={index} />;
           })}
         </div>
       )}

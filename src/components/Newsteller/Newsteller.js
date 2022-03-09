@@ -3,6 +3,7 @@ import { getTranslation } from "../../Utils/getLanguage";
 import "./Newsteller.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import PopUpThankYou from "../PopUpThankYou/PopUpThankYou";
+import DropDownInput from "../DropDownInput/DropDownInput";
 
 function Newsletter(props) {
   const [checkBox, setCheckBox] = React.useState(false);
@@ -101,6 +102,7 @@ function Newsletter(props) {
                 : { marginLeft: "20px", marginTop: "0", maxWidth: "1000px" }
             }
           ></input>
+          <DropDownInput placeholder="Choose Your City" />
         </div>
         <div className="DataProtectionPolicyCheck">
           <div

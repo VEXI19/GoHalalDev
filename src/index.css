@@ -2,6 +2,12 @@
   --dark-green: #115c07;
   --dark-green-filter: brightness(0) saturate(100%) invert(20%) sepia(68%)
     saturate(2052%) hue-rotate(83deg) brightness(97%) contrast(94%);
+  --dark-filter: brightness(0) saturate(100%);
+  --white-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+    saturate(7500%) hue-rotate(359deg) brightness(106%) contrast(105%);
+  --light-grey-filter: brightness(0) saturate(100%) invert(74%) sepia(1%)
+    saturate(357%) hue-rotate(50deg) brightness(94%) contrast(85%);
+  --light-green: #a5cc25;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -21,6 +27,7 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
 }
 
 code {

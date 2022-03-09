@@ -133,7 +133,10 @@ function MainControlBar(props) {
           )}
 
           <div className="SearchBarContainer">
-            <SearchBar placeholder="I'm searching for" />
+            <SearchBar
+              size="min(15vw * 0.7, 90px * 0.7)"
+              placeholder="I'm searching for"
+            />
             {windowWitdth >= 700 && (
               <div className="Regional">
                 <span>Regional:</span>

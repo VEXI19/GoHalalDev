@@ -19,3 +19,13 @@
 .ButtonWithDropDown > img {
   height: min(5vw, 35px);
 }
+
+.cartNumber {
+  position: absolute;
+
+  right: -0.5em;
+  top: -1em;
+  padding: 0.1em 0.4em;
+  background-color: var(--dark-green);
+  border-radius: 50%;
+}

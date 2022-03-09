@@ -1,9 +1,9 @@
 import React from "react";
 import "./Pros.css";
-import AuthenticityCheck from "../../icons/Group (1).svg";
-import ReturnPolicy from "../../icons/Group 5064.svg";
-import SecurePayment from "../../icons/Group 3159.svg";
-import DedicatedCustomerSupport from "../../icons/Group 5056.svg";
+import AuthenticityCheck from "../../icons/Authenticity Check.svg";
+import ReturnPolicy from "../../icons/Return Policy.svg";
+import SecurePayment from "../../icons/Secure Payment.svg";
+import DedicatedCustomerSupport from "../../icons/Dedicated customer Support.svg";
 import WeeklyOffers from "../../icons/Weekly Offers.svg";
 import { getTranslation } from "../../Utils/getLanguage";
 
@@ -63,7 +63,7 @@ function Pros(props) {
                     paddingTop: "min(4vw, 40px)",
                     paddingBottom: "min(4vw, 40px)",
                   }
-                : { paddingTop: "80px", paddingBottom: "80px" }
+                : {}
             }
           >
             <img src={elem.icon} alt="" />

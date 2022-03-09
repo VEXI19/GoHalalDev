@@ -4,8 +4,8 @@ import "./BottomMenu.css";
 import Phone from "../../icons/VectorPhone.svg";
 import Address from "../../icons/Vector (2).svg";
 import Mail from "../../icons/Vector (3).svg";
-import arrowDown from "../../icons/down-arrow.png";
-import arrowUp from "../../icons/up-arrow.png";
+
+import LanguageButton from "../LanguageButton/LanguageButton";
 
 function BottomMenu(props) {
   const tabs = {
@@ -40,11 +40,7 @@ function BottomMenu(props) {
     ],
   };
 
-  const languageArray = ["English", "German", "Polish", "Spanish"];
-
   const [windowWidth, setWindowWidth] = React.useState(null);
-  const [languageShow, setLanguageShow] = React.useState(false);
-  const [languagePick, setLanguagePick] = React.useState(false);
 
   window.addEventListener("resize", () => {
     setWindowWidth(window.innerWidth);
@@ -180,44 +176,11 @@ function BottomMenu(props) {
                 </span>
               );
             })}
-            <div style={{ backgroundColor: "aqua", marginTop: "0.5em" }}>
-              <div className="LanguageDropDown">
-                <div
-                  className="LanguageDropDownHeader"
-                  onClick={() => {
-                    setLanguageShow(!languageShow);
-                  }}
-                >
-                  <span id="LanguagePickElem">{getTranslation("English")}</span>
-                  <div>
-                    <img src={languageShow ? arrowUp : arrowDown} alt="" />
-                  </div>
-                </div>
-                {languageShow && (
-                  <div className="LanguageDropDownOptions">
-                    {languageArray.map((elem, index) => {
-                      return (
-                        <span
-                          onClick={() => {
-                            document.getElementById(
-                              "LanguagePickElem"
-                            ).innerHTML = elem;
-                            document.getElementById(
-                              "LanguagePickElem"
-                            ).style.color = "black";
-                            setLanguageShow(false);
-                            setLanguagePick(elem);
-                          }}
-                          key={index}
-                        >
-                          {getTranslation(elem)}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            </div>
+            <LanguageButton
+              setPadding="0.5em 0"
+              translateY="2.4em"
+              border={true}
+            />
           </div>
         </div>
       </div>

@@ -22,26 +22,32 @@ function ToBarList(props) {
     windowWitdth <= 1200
       ? [
           {
+            route: "aboutus",
             text: "About Us",
             icon: AboutUs,
             dropDownList: [
               {
+                route: "aboutus?section=ourstory",
                 text: "About Us",
                 icon: AboutUs2,
               },
               {
+                route: "aboutus?section=ourstory",
                 text: "Our Story",
                 icon: OurStory,
               },
               {
+                route: "aboutus?section=missionvision",
                 text: "Mission & Vision",
                 icon: Mission,
               },
               {
+                route: "aboutus?section=corevalue",
                 text: "Core Values",
                 icon: CoreValues,
               },
               {
+                route: "aboutus?section=ourfounders",
                 text: "Our Founders",
                 icon: OurFounders,
               },
@@ -50,20 +56,24 @@ function ToBarList(props) {
 
           {
             text: "Authenticity",
+            route: "Authenticity",
             icon: Authenticity,
             dropDownList: [],
           },
 
           {
             text: "FAQ",
+            route: "FAQ",
             icon: FAQ,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
             ],
@@ -71,14 +81,17 @@ function ToBarList(props) {
 
           {
             text: "Career",
+            route: "Career",
             icon: Career,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
             ],
@@ -86,14 +99,17 @@ function ToBarList(props) {
 
           {
             text: "Language",
+            route: "Language",
             icon: Language,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfasfdasdfasfdasfafasfd",
+                route: "adsfasfdasdfasfdasfafasfd",
                 icon: Account,
               },
             ],
@@ -101,46 +117,59 @@ function ToBarList(props) {
 
           {
             text: "Account",
+            route: "Account",
             icon: Account,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfadsfasfsafasfasfd",
+                route: "adsfadsfasfsafasfasfd",
                 icon: Account,
               },
             ],
           },
-          { text: "Recipes", icon: Recipes },
-          { text: "Go Halal Family", icon: GoHalalFamily },
-          { text: "Zakat", icon: Zakat },
+          { text: "Recipes", route: "recipes", icon: Recipes },
+          {
+            text: "Go Halal Family",
+            route: "gohalalfamily",
+            icon: GoHalalFamily,
+          },
+          { route: "zakat", text: "Zakat", icon: Zakat },
 
-          { text: "Blog", icon: Blog },
+          { route: "blog", text: "Blog", icon: Blog },
         ]
       : [
           {
+            route: "aboutus",
             text: "About Us",
             icon: AboutUs,
             dropDownList: [
               {
+                route: "aboutus?section=ourstory",
                 text: "About Us",
                 icon: AboutUs2,
               },
               {
+                route: "aboutus?section=ourstory",
                 text: "Our Story",
                 icon: OurStory,
               },
               {
+                route: "aboutus?section=missionvision",
                 text: "Mission & Vision",
                 icon: Mission,
               },
               {
+                route: "aboutus?section=corevalue",
                 text: "Core Values",
                 icon: CoreValues,
               },
               {
+                route: "aboutus?section=ourfounders",
                 text: "Our Founders",
                 icon: OurFounders,
               },
@@ -149,19 +178,23 @@ function ToBarList(props) {
 
           {
             text: "Authenticity",
+            route: "Authenticity",
             icon: Authenticity,
           },
 
           {
             text: "FAQ",
+            route: "FAQ",
             icon: FAQ,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
             ],
@@ -169,14 +202,17 @@ function ToBarList(props) {
 
           {
             text: "Career",
+            route: "Career",
             icon: Career,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
             ],
@@ -184,29 +220,33 @@ function ToBarList(props) {
 
           {
             text: "Language",
+            route: "Language",
             icon: Language,
             dropDownList: [
               {
-                text: "adsfasfd",
-                icon: Account,
+                text: "English",
+                route: "English",
               },
               {
-                text: "adsfasfdasdfasfdasfafasfd",
-                icon: Account,
+                text: "French",
+                route: "French",
               },
             ],
           },
 
           {
             text: "Account",
+            route: "Account",
             icon: Account,
             dropDownList: [
               {
                 text: "adsfasfd",
+                route: "adsfasfd",
                 icon: Account,
               },
               {
                 text: "adsfadsfasfsafasfasfd",
+                route: "adsfadsfasfsafasfasfd",
                 icon: Account,
               },
             ],

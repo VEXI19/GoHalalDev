@@ -7,7 +7,12 @@
 
 @media (max-width: 1200px) {
   .MainControlBar {
-    padding-top: clamp(20px, 6vw, 50px);
+    padding-top: clamp(50px, 10vw, 70px);
+  }
+}
+@media (max-width: 600px) {
+  .MainControlBar {
+    padding-top: 0.5em;
   }
 }
 
@@ -50,7 +55,6 @@
   justify-content: space-around;
   /* min-height: 40px; */
   height: min(15vw, 90px);
-  /* background-color: red; */
 
   max-width: 800px;
   width: 100%;

@@ -40,7 +40,6 @@ function CategoriesBar(props) {
         }
       >
         <div onClick={() => setShowAllCategories(!showAllCategories)}>
-          <img src={Menu} alt="" />
           <span>{getTranslation("All Categories")}</span>
           <img
             style={{

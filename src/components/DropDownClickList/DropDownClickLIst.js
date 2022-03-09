@@ -25,6 +25,8 @@ function DropDownClickList({ categories, placeholder }) {
         onClick={() => setOpen(!open)}
         className="DropDownClickListHeader"
       >
+        <div className="devider" />
+
         <span
           style={{ pointerEvents: "none" }}
           ref={AllCategories}

@@ -3,6 +3,7 @@ import "./MenuObject.css";
 import VerticalLine from "../../icons/Line 164Line.svg";
 import { getTranslation } from "../../Utils/getLanguage";
 import DropDownList from "../DropDownList/DropDownList";
+import { Link } from "react-router-dom";
 
 function MenuObject({
   icon,
@@ -10,16 +11,16 @@ function MenuObject({
   isVerticalLine,
   dropDownList,
   id,
+  route,
   clickable = true,
   showDropDownList,
   shortVersion,
 }) {
+  // console.log(text, route);
   const [hover, setHover] = React.useState(false);
-
   return (
     <div
       className="MenuObject"
-      onClick={() => console.log(text)}
       onMouseEnter={() => {
         setHover(true);
 
@@ -41,42 +42,50 @@ function MenuObject({
         text.style.color = "white";
       }}
     >
-      <div className="MenuObjectContainer" id={"menuObjectContainer" + id}>
+      <Link to={`/${route}`} style={{ textDecoration: "none" }}>
         <div
-          className={shortVersion ? "ShortVersion" : ""}
-          style={
-            shortVersion
-              ? { flexDirection: "row-reverse" }
-              : { flexDirection: "row" }
-          }
+          onClick={() => console.log(text)}
+          className="MenuObjectContainer"
+          id={"menuObjectContainer" + id}
         >
-          <img
-            id={"icon" + id}
+          <div
+            className={shortVersion ? "ShortVersion" : ""}
             style={
               shortVersion
-                ? {
-                    paddingLeft: "min(4vw, 10px)",
-                  }
-                : {
-                    paddingLeft: "min(4vw, 10px)",
-                    paddingRight: "min(4vw, 10px)",
-                  }
+                ? { flexDirection: "row-reverse" }
+                : { flexDirection: "row" }
             }
-            src={icon}
-            alt=""
-          />
-          <span
-            className={shortVersion ? "ShortVersionSpan" : ""}
-            style={
-              isVerticalLine ? { paddingRight: "10px" } : { paddingRight: "0" }
-            }
-            id={"text" + id}
           >
-            {getTranslation(text)}
-          </span>
+            <img
+              id={"icon" + id}
+              style={
+                shortVersion
+                  ? {
+                      paddingLeft: "min(4vw, 10px)",
+                    }
+                  : {
+                      paddingLeft: "min(4vw, 10px)",
+                      paddingRight: "min(4vw, 10px)",
+                    }
+              }
+              src={icon}
+              alt=""
+            />
+            <span
+              className={shortVersion ? "ShortVersionSpan" : ""}
+              style={
+                isVerticalLine
+                  ? { paddingRight: "10px" }
+                  : { paddingRight: "0" }
+              }
+              id={"text" + id}
+            >
+              {getTranslation(text)}
+            </span>
+          </div>
+          {isVerticalLine && <img src={VerticalLine} alt="" />}
         </div>
-        {isVerticalLine && <img src={VerticalLine} alt="" />}
-      </div>
+      </Link>
       {dropDownList && showDropDownList && (
         <DropDownList translateDown="20px" show={hover} list={dropDownList} />
       )}

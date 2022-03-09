@@ -26,38 +26,9 @@
   cursor: pointer;
 }
 
-.DropDownListContainer > div > div > div > img {
-  width: min(5vw, 25px);
-}
-
-.DropDownListContainer > div > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-.DropDownListContainer > div > div:hover {
-  background-color: rgb(235, 235, 235);
-}
-
-.DropDownListContainer > div > div > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.DropDownListContainer > div > div > div > span {
-  color: rgb(0, 0, 0);
-  font-family: "Maven Pro", sans-serif;
-  font-size: min(3vw, 15px);
-  margin-left: min(3vw, 10px);
-  margin-right: min(5vw, 30px);
-}
-
 .DropDownListDevider {
   height: 1px;
+
   width: 100%;
   background-color: black;
 }

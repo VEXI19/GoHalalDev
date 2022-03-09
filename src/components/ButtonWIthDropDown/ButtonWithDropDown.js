@@ -4,7 +4,6 @@ import DropDownList from "../DropDownList/DropDownList";
 
 function ButtonWithDropDown({ elem }) {
   const [showDropDown, setShowDropDown] = React.useState(false);
-
   return (
     <div
       className="ButtonWithDropDown"
@@ -24,6 +23,11 @@ function ButtonWithDropDown({ elem }) {
       <span style={showDropDown ? { color: "var(--dark-green)" } : {}}>
         {elem.text}
       </span>
+      {elem.text === "My Cart" && (
+        <span style={{ color: "white" }} className="cartNumber">
+          2
+        </span>
+      )}
       <DropDownList
         id="DropDownList"
         translateDown="min(7vw, 35px)"

@@ -3,17 +3,30 @@ import DropDownClickList from "../DropDownClickList/DropDownClickLIst";
 import "./SearchBar.css";
 import searchButton from "../../icons/GroupsearchButton.svg";
 
-function SearchBar({ isCategories = true, placeholder, button = "" }) {
+function SearchBar({
+  isCategories = true,
+  placeholder,
+  button = "",
+  size,
+  buttonLeft = false,
+  buttonTransparent = false,
+}) {
   const Categories = ["All Categories", "Meat", "Vegies", "Fruits", "Milk"];
-
   return (
-    <div className="SearchBar">
-      <form action="/" method="get">
+    <div className="SearchBar" style={{ height: size }}>
+      <form
+        action="/"
+        method="get"
+        style={
+          buttonLeft
+            ? { flexDirection: "row-reverse" }
+            : { flexDirection: "row" }
+        }
+      >
         <input type="text" id="header-search" placeholder={placeholder} />
         <div>
           {isCategories && (
             <>
-              <div className="devider" />
               <DropDownClickList
                 placeholder="All Categories"
                 categories={Categories}
@@ -21,12 +34,24 @@ function SearchBar({ isCategories = true, placeholder, button = "" }) {
               />
             </>
           )}
-          <button>
-            {button && <span style={{ padding: "0.5em 1em" }}>{button}</span>}
+          <button
+            style={
+              !button
+                ? buttonTransparent
+                  ? { width: size, backgroundColor: "transparent" }
+                  : { width: size, backgroundColor: "#a5cc25" }
+                : {}
+            }
+          >
+            {button && <span style={{ padding: "0.5em 0.5em" }}>{button}</span>}
 
             {!button && (
               <img
-                style={{ width: "min(4vw, 25px)", padding: "1vw" }}
+                style={
+                  buttonTransparent
+                    ? { width: "min(4vw, 25px)", filter: "var(--dark-filter)" }
+                    : {}
+                }
                 src={searchButton}
                 alt=""
               />

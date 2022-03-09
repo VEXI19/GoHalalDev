@@ -3,8 +3,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
 }
 
 .TopBarContainer2 {
@@ -36,7 +36,7 @@
   padding-bottom: min(5%, 20px);
   transition: all ease 0.3s;
   animation: slide 0.2s ease;
-  z-index: 100;
+  z-index: 300;
   overflow-y: scroll;
 }
 
