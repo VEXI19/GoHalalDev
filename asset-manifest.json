@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/GoHalalDev/static/css/main.fc4b63f9.css",
-    "main.js": "/GoHalalDev/static/js/main.d15561b1.js",
+    "main.css": "/GoHalalDev/static/css/main.1d44e02e.css",
+    "main.js": "/GoHalalDev/static/js/main.b365fe9f.js",
     "static/media/Group 2331founder.svg": "/GoHalalDev/static/media/Group 2331founder.5a93a82ba85ece65e9a811b8fbb7d6b9.svg",
     "static/media/Package 1MadeBetter.svg": "/GoHalalDev/static/media/Package 1MadeBetter.a2d8efb363a6493de385a5f6fdc1c4bb.svg",
-    "static/media/Rectangle 193.jpg": "/GoHalalDev/static/media/Rectangle 193.44638a328312d55197a8.jpg",
     "static/media/Group 5348.svg": "/GoHalalDev/static/media/Group 5348.734779eab50163a86ef9d987f82b55bc.svg",
+    "static/media/women with vegetable 2.png": "/GoHalalDev/static/media/women with vegetable 2.95cb5da4dbd3b76623e8.png",
     "static/media/Group 5019backgroundComingSoon (1).png": "/GoHalalDev/static/media/Group 5019backgroundComingSoon (1).dd140c6679ce2643a78a.png",
     "static/media/Group 5052founder1.svg": "/GoHalalDev/static/media/Group 5052founder1.f4edf177d72fb1ea7b00b204065d8714.svg",
     "static/media/Method Draw Image (2).png": "/GoHalalDev/static/media/Method Draw Image (2).80da5ff4890e5a920f2d.png",
+    "static/media/Banner 1.png": "/GoHalalDev/static/media/Banner 1.51e2a5acf8835f4d1e4a.png",
+    "static/media/women with vegetable 1 1.png": "/GoHalalDev/static/media/women with vegetable 1 1.411ba36681e97d06128b.png",
     "static/media/Group 2330founder2.svg": "/GoHalalDev/static/media/Group 2330founder2.838856213424a506f74f2267696d4279.svg",
     "static/media/handsome-young-delivery-man-with-box-isolated-white-background 1 (1).png": "/GoHalalDev/static/media/handsome-young-delivery-man-with-box-isolated-white-background 1 (1).062e464f7b56caf604a0.png",
     "static/media/Mask group.png": "/GoHalalDev/static/media/Mask group.346601a84e6cc053d8c2.png",
@@ -16,6 +18,11 @@
     "static/media/van.jpg": "/GoHalalDev/static/media/van.a1a2c093251253e57662.jpg",
     "static/media/avatar1 3.png": "/GoHalalDev/static/media/avatar1 3.cc3d57fe2ecd46436d30.png",
     "static/media/avatar1 2 (1).png": "/GoHalalDev/static/media/avatar1 2 (1).ee91a502f2675454832f.png",
+    "static/media/Meat 04 1.png": "/GoHalalDev/static/media/Meat 04 1.e64bde0387772de0e92e.png",
+    "static/media/Meat 01 1.png": "/GoHalalDev/static/media/Meat 01 1.b5389aa31b261fef2c4f.png",
+    "static/media/Meat 03 1.png": "/GoHalalDev/static/media/Meat 03 1.9ad9daeab302f93dc065.png",
+    "static/media/Meat 05 1.png": "/GoHalalDev/static/media/Meat 05 1.9cdf3bfc4d7633f558d3.png",
+    "static/media/Meat 02 1.png": "/GoHalalDev/static/media/Meat 02 1.60ff7409e9b68c09d529.png",
     "static/media/The Halal You Love and Trust Made Better. Better for the WorldMadeBetterText.svg": "/GoHalalDev/static/media/The Halal You Love and Trust Made Better. Better for the WorldMadeBetterText.1495cba9aa4dc2198923f866218d4dde.svg",
     "static/media/Trusted Halal Shop 1.png": "/GoHalalDev/static/media/Trusted Halal Shop 1.07ed0125547ff49e6f66.png",
     "static/media/GroupOurFounders.svg": "/GoHalalDev/static/media/GroupOurFounders.af3470fc4fce661369026ad0f4ff00fc.svg",
@@ -71,11 +78,11 @@
     "static/media/Books.svg": "/GoHalalDev/static/media/Books.82909b238958459a2cacf91a3deb9e43.svg",
     "static/media/Authenticity Check.svg": "/GoHalalDev/static/media/Authenticity Check.9ca52e571b0c9bc4be54a36fabeb733e.svg",
     "static/media/GroupBlog.svg": "/GoHalalDev/static/media/GroupBlog.33641b06a7b5ef24a01c3e8be08a119d.svg",
-    "static/media/Weekly Offers.svg": "/GoHalalDev/static/media/Weekly Offers.965151dd34b7f5318e73a25e4c51e773.svg",
     "static/media/Baby & kids.svg": "/GoHalalDev/static/media/Baby & kids.889433e74e3ad089d160d9c5282f5862.svg",
     "static/media/Group 3412Milk.svg": "/GoHalalDev/static/media/Group 3412Milk.792e8f51330ea1751319b32109b72b42.svg",
     "static/media/Group (16).svg": "/GoHalalDev/static/media/Group (16).5f5e5742a5e7a8b8a57f96c574a5cb8e.svg",
     "static/media/GroupDiscounts.svg": "/GoHalalDev/static/media/GroupDiscounts.a4f83f21e0fbdcb7cbc3e6bd1b2c7f21.svg",
+    "static/media/Weekly Offers.svg": "/GoHalalDev/static/media/Weekly Offers.f6debd218eb69845ca4f9fc03095169b.svg",
     "static/media/Vector (8).svg": "/GoHalalDev/static/media/Vector (8).5ed3d24fd9419fa55d24bf547a9bc9a4.svg",
     "static/media/AboutUs.svg": "/GoHalalDev/static/media/AboutUs.8483c7214dd1d0bdea6049eed7f9c5ef.svg",
     "static/media/Twitter.svg": "/GoHalalDev/static/media/Twitter.798b219c8720e73e910dad390e897952.svg",
@@ -149,11 +156,11 @@
     "static/media/icons8-menu.svg": "/GoHalalDev/static/media/icons8-menu.151ef2b70c060f0ed4956ce988930ed3.svg",
     "static/media/Line 164Line.svg": "/GoHalalDev/static/media/Line 164Line.f4671cb895ea96255154d2a5c60cac25.svg",
     "static/media/rightArrow.svg": "/GoHalalDev/static/media/rightArrow.e13f23e5b26d2fd4ce9903f5404e5de8.svg",
-    "main.fc4b63f9.css.map": "/GoHalalDev/static/css/main.fc4b63f9.css.map",
-    "main.d15561b1.js.map": "/GoHalalDev/static/js/main.d15561b1.js.map"
+    "main.1d44e02e.css.map": "/GoHalalDev/static/css/main.1d44e02e.css.map",
+    "main.b365fe9f.js.map": "/GoHalalDev/static/js/main.b365fe9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc4b63f9.css",
-    "static/js/main.d15561b1.js"
+    "static/css/main.1d44e02e.css",
+    "static/js/main.b365fe9f.js"
   ]
 }
