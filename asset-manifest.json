@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GoHalalDev/static/css/main.8fd8c018.css",
-    "main.js": "/GoHalalDev/static/js/main.65dc63df.js",
+    "main.css": "/GoHalalDev/static/css/main.b01beb55.css",
+    "main.js": "/GoHalalDev/static/js/main.b3330aa6.js",
     "static/media/Group 2331founder.svg": "/GoHalalDev/static/media/Group 2331founder.5a93a82ba85ece65e9a811b8fbb7d6b9.svg",
     "static/media/Package 1MadeBetter.svg": "/GoHalalDev/static/media/Package 1MadeBetter.a2d8efb363a6493de385a5f6fdc1c4bb.svg",
     "static/media/Group 5348.svg": "/GoHalalDev/static/media/Group 5348.734779eab50163a86ef9d987f82b55bc.svg",
@@ -65,9 +65,11 @@
     "static/media/GroupZakat.svg": "/GoHalalDev/static/media/GroupZakat.5267b6de8b469596d81fbae4e44a08e9.svg",
     "static/media/Group (6).svg": "/GoHalalDev/static/media/Group (6).0fb88e1d3aa94371f4d5335b2c489902.svg",
     "static/media/Meats, fish & poultry.svg": "/GoHalalDev/static/media/Meats, fish & poultry.bfca632afa6c30b68274b0b844ea4517.svg",
+    "static/media/Group (21).svg": "/GoHalalDev/static/media/Group (21).2954f7b0193dd5b0969960c1d1dd0d6f.svg",
     "static/media/Group (17).svg": "/GoHalalDev/static/media/Group (17).661dcec6203d489ca4b9d6fb996ac553.svg",
     "static/media/Ramadhan special.svg": "/GoHalalDev/static/media/Ramadhan special.97541e95ad0aa61778f4d8a8fb4c1099.svg",
     "static/media/Cooking Oils.svg": "/GoHalalDev/static/media/Cooking Oils.a049573b6f3d92a0c83aecba77f29c90.svg",
+    "static/media/Group (19).svg": "/GoHalalDev/static/media/Group (19).d5156cd63f1dcc891c48d35646d19ff5.svg",
     "static/media/Household Hygiene.svg": "/GoHalalDev/static/media/Household Hygiene.89deacaaf3787aa8e3b5e82769d783a6.svg",
     "static/media/Vegan.svg": "/GoHalalDev/static/media/Vegan.16c95651b906216639b077d7cb1eb493.svg",
     "static/media/Group 3410Fruits.svg": "/GoHalalDev/static/media/Group 3410Fruits.f2f6df0cf93c8cf40ea124a50904c163.svg",
@@ -76,6 +78,7 @@
     "static/media/Frozen Products.svg": "/GoHalalDev/static/media/Frozen Products.2cfe76fba9f7a7a9509b928b4adc9ffb.svg",
     "static/media/Group 3413FrozenProducts.svg": "/GoHalalDev/static/media/Group 3413FrozenProducts.4d722841979ffc7acbc3b07046117e55.svg",
     "static/media/Books.svg": "/GoHalalDev/static/media/Books.82909b238958459a2cacf91a3deb9e43.svg",
+    "static/media/Group (20).svg": "/GoHalalDev/static/media/Group (20).30ed871bae126fd3e2a70f4de0f042ff.svg",
     "static/media/Authenticity Check.svg": "/GoHalalDev/static/media/Authenticity Check.9ca52e571b0c9bc4be54a36fabeb733e.svg",
     "static/media/GroupBlog.svg": "/GoHalalDev/static/media/GroupBlog.33641b06a7b5ef24a01c3e8be08a119d.svg",
     "static/media/Baby & kids.svg": "/GoHalalDev/static/media/Baby & kids.889433e74e3ad089d160d9c5282f5862.svg",
@@ -156,11 +159,11 @@
     "static/media/icons8-menu.svg": "/GoHalalDev/static/media/icons8-menu.151ef2b70c060f0ed4956ce988930ed3.svg",
     "static/media/Line 164Line.svg": "/GoHalalDev/static/media/Line 164Line.f4671cb895ea96255154d2a5c60cac25.svg",
     "static/media/rightArrow.svg": "/GoHalalDev/static/media/rightArrow.e13f23e5b26d2fd4ce9903f5404e5de8.svg",
-    "main.8fd8c018.css.map": "/GoHalalDev/static/css/main.8fd8c018.css.map",
-    "main.65dc63df.js.map": "/GoHalalDev/static/js/main.65dc63df.js.map"
+    "main.b01beb55.css.map": "/GoHalalDev/static/css/main.b01beb55.css.map",
+    "main.b3330aa6.js.map": "/GoHalalDev/static/js/main.b3330aa6.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fd8c018.css",
-    "static/js/main.65dc63df.js"
+    "static/css/main.b01beb55.css",
+    "static/js/main.b3330aa6.js"
   ]
 }
