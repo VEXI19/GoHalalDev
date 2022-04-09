@@ -2,6 +2,7 @@ import React from "react";
 import "./WhyGoHalal.css";
 import WhyGoHalalIcon from "../../icons/WHY GO HALALwhyGoHalal.svg";
 import { getTranslation } from "./../../Utils/getLanguage";
+import { Link } from "react-router-dom";
 
 function WhyGoHalal(props) {
   window.addEventListener("resize", () => {
@@ -11,14 +12,12 @@ function WhyGoHalal(props) {
       // document.getElementById("WhyGoHalalRightSide").style.width = "90%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "90%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "30px";
-      document.getElementById("WhyGoHalal").style.width = "60%";
     } else {
       document.getElementById("WhyGoHalal").style.flexDirection = "row";
       document.getElementById("WhyGoHalalText").style.textAlign = "left";
       // document.getElementById("WhyGoHalalRightSide").style.width = "40%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "40%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "0px";
-      document.getElementById("WhyGoHalal").style.width = "90%";
     }
   });
 
@@ -29,14 +28,12 @@ function WhyGoHalal(props) {
       // document.getElementById("WhyGoHalalRightSide").style.width = "90%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "90%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "30px";
-      document.getElementById("WhyGoHalal").style.width = "60%";
     } else {
       document.getElementById("WhyGoHalal").style.flexDirection = "row";
       document.getElementById("WhyGoHalalText").style.textAlign = "left";
       // document.getElementById("WhyGoHalalRightSide").style.width = "40%";
       // document.getElementById("WhyGoHalalLeftSide").style.width = "40%";
       document.getElementById("WhyGoHalalLeftSide").style.marginBottom = "0px";
-      document.getElementById("WhyGoHalal").style.width = "90%";
     }
   }, []);
 
@@ -45,7 +42,9 @@ function WhyGoHalal(props) {
       <div id="WhyGoHalal" className="WhyGoHalal">
         <div id="WhyGoHalalLeftSide" className="WhyGoHalalLeftSide">
           <img src={WhyGoHalalIcon} alt="" />
-          <button>Our Story</button>
+          <Link to={"aboutus?section=ourstory"}>
+            <button className="WhyGoHalalButton">Our Story</button>
+          </Link>
         </div>
         <div id="WhyGoHalalRightSide" className="WhyGoHalalRightSide">
           <div id="WhyGoHalalText" className="WhyGoHalalText">

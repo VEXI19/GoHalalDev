@@ -29,7 +29,7 @@
 .AllCategoriesCategory > div > span {
   text-align: center;
   color: black;
-  font-size: clamp(15px, 5px + 1vw, 22px);
+  font-size: clamp(12px, 5px + 1vw, 22px);
   font-weight: bold;
   margin-top: 5%;
   padding: 0 15px;

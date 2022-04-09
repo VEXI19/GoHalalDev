@@ -9,6 +9,7 @@
   background-color: white;
   height: min-content;
   z-index: 30;
+  position: relative;
 }
 
 .LanguageDropDownHeader {
@@ -34,15 +35,16 @@
   align-items: center;
   position: absolute;
   width: 100%;
+
   background-color: white;
 }
 
 .LanguageDropDownOptions > span {
   font-size: clamp(3px, 2vh, 16px);
   padding: 0.5em 0;
-  width: 100%;
   text-align: center;
   height: 100%;
+  width: 100%;
 }
 
 .LanguageDropDownOptions > span:hover {

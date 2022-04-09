@@ -65,72 +65,28 @@ function ToBarList(props) {
             text: "FAQ",
             route: "FAQ",
             icon: FAQ,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-            ],
+            dropDownList: [],
           },
 
           {
             text: "Career",
             route: "Career",
             icon: Career,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-            ],
+            dropDownList: [],
           },
 
           {
             text: "Language",
             route: "Language",
             icon: Language,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfasfdasdfasfdasfafasfd",
-                route: "adsfasfdasdfasfdasfafasfd",
-                icon: Account,
-              },
-            ],
+            dropDownList: [],
           },
 
           {
             text: "Account",
             route: "Account",
             icon: Account,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfadsfasfsafasfasfd",
-                route: "adsfadsfasfsafasfasfd",
-                icon: Account,
-              },
-            ],
+            dropDownList: [],
           },
           { text: "Recipes", route: "recipes", icon: Recipes },
           {
@@ -186,70 +142,24 @@ function ToBarList(props) {
             text: "FAQ",
             route: "FAQ",
             icon: FAQ,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-            ],
           },
 
           {
             text: "Career",
             route: "Career",
             icon: Career,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-            ],
           },
 
           {
             text: "Language",
             route: "Language",
             icon: Language,
-            dropDownList: [
-              {
-                text: "English",
-                route: "English",
-              },
-              {
-                text: "French",
-                route: "French",
-              },
-            ],
           },
 
           {
             text: "Account",
             route: "Account",
             icon: Account,
-            dropDownList: [
-              {
-                text: "adsfasfd",
-                route: "adsfasfd",
-                icon: Account,
-              },
-              {
-                text: "adsfadsfasfsafasfasfd",
-                route: "adsfadsfasfsafasfasfd",
-                icon: Account,
-              },
-            ],
           },
         ];
   return Tabs;

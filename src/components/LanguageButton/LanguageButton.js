@@ -9,6 +9,7 @@ import VerticalLine from "../../icons/Line 164Line.svg";
 function LanguageButton({
   color,
   border,
+  borderTop = false,
   background,
   colorIcon,
   setPadding,
@@ -32,6 +33,7 @@ function LanguageButton({
             : { padding: setPadding, color }
         }
         onClick={() => {
+          console.log("click");
           setDropDownShow(!dropDownShow);
         }}
       >
@@ -40,7 +42,7 @@ function LanguageButton({
           src={LanguageIcon}
           alt=""
         />
-        <span id="LanguagePickElem">{getTranslation("English")}</span>
+        <span id="LanguagePickElem">English</span>
         <img
           style={colorIcon ? { filter: colorIcon } : {}}
           src={dropDownShow ? arrowUp : arrowDown}
@@ -62,7 +64,7 @@ function LanguageButton({
         <div
           className="LanguageDropDownOptions"
           style={
-            border
+            borderTop
               ? {
                   border: "1px black solid",
                   borderTop: "none",
@@ -78,7 +80,8 @@ function LanguageButton({
             return (
               <span
                 onClick={() => {
-                  document.getElementById("LanguagePickElem").innerHTML = elem;
+                  document.getElementById("LanguagePickElem").textContent =
+                    elem;
 
                   setDropDownShow(false);
                   setLanguage(elem);

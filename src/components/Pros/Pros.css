@@ -31,7 +31,9 @@
 .SinglePro > img {
   max-height: min(20vw, 110px);
   width: 100%;
+  object-fit: contain;
   margin-bottom: min(5vw, 30px);
+  filter: var(--dark-green-filter);
 }
 
 .ProsText {

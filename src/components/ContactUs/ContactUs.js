@@ -27,27 +27,16 @@ function ContactUs(props) {
             "Please complete the contact form so that we can answer your questions, requests, feedback and suggestions."
           )}
         </span>
-        <div
-          style={
-            windowWidth <= 1370
-              ? { flexDirection: "column-reverse", alignItems: "center" }
-              : { flexDirection: "row", alignItems: "flex-start" }
-          }
-        >
+        <div>
           <ContactUsForm />
-          <div
-            className="ContactUsInfo"
-            style={
-              windowWidth <= 1370
-                ? { marginBottom: "min(20vw, 50px)" }
-                : { marginBottom: "0" }
-            }
-          >
-            <img src={ContactUsIcon} alt="" />
+          <span className="ContactUsSecondHeader">
+            {getTranslation("Want to speak with our customer support?")}{" "}
+          </span>
+          <div className="ContactUsInfo">
             <div className="RowText">
               <img src={Phone} alt="" />
               <div style={{ width: "80%" }}>
-                <span>{getTranslation("Hotline (Mo. -Sa. 8 -20 Hrs.) ")}</span>
+                <span>{getTranslation("Hotline (Mo.-Fri. 8-20 Hrs.) ")}</span>
                 <span style={{ whiteSpace: "nowrap" }}>
                   {getTranslation("+49 - 8161 - 5193561")}
                 </span>

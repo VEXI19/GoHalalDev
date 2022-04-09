@@ -4,6 +4,7 @@ import Founder1 from "../../icons/Group 5052founder1.svg";
 import Founder2 from "../../icons/Group 2330founder2.svg";
 import Founder3 from "../../icons/Group 2331founder.svg";
 import { getTranslation } from "../../Utils/getLanguage";
+import { Link } from "react-router-dom";
 
 function Founders(props) {
   React.useEffect(() => {
@@ -51,24 +52,15 @@ function Founders(props) {
       <div className="FoundersContainer">
         <span id="FoundersText">{getTranslation("OUR FOUNDERS")}</span>
         <div id="FoundersPhotos" className="FoundersPhotos">
-          <img
-            onClick={() => console.log("founder3")}
-            id="founder3"
-            src={Founder3}
-            alt=""
-          />
-          <img
-            onClick={() => console.log("founder2")}
-            id="founder2"
-            src={Founder2}
-            alt=""
-          />
-          <img
-            onClick={() => console.log("founder1")}
-            id="founder1"
-            src={Founder1}
-            alt=""
-          />
+          <Link to={"aboutus?section=ourfounders"}>
+            <img id="founder3" src={Founder3} alt="" />
+          </Link>
+          <Link to={"aboutus?section=ourfounders"}>
+            <img id="founder2" src={Founder2} alt="" />
+          </Link>
+          <Link to={"aboutus?section=ourfounders"}>
+            <img id="founder1" src={Founder1} alt="" />
+          </Link>
         </div>
       </div>
     </div>

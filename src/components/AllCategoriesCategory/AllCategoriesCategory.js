@@ -2,7 +2,7 @@ import React from "react";
 import "./AllCategoriesCategory.css";
 import { getTranslation } from "../../Utils/getLanguage";
 
-function AllCategoriesCategory({ icon, text, colorChangeOnHover }) {
+function AllCategoriesCategory({ icon, text, colorChangeOnHover, isMobile }) {
   const [hover, setHover] = React.useState(false);
   return (
     <div
@@ -11,10 +11,20 @@ function AllCategoriesCategory({ icon, text, colorChangeOnHover }) {
       onClick={() => console.log(text)}
       className="AllCategoriesCategory"
       id="AllCategoriesCategory"
-      style={hover ? { backgroundColor: "rgb(224, 224, 224)" } : {}}
+      style={
+        isMobile
+          ? { border: "1px rgb(224, 224, 224) solid", borderRadius: "10px" }
+          : hover
+          ? { backgroundColor: "rgb(224, 224, 224)" }
+          : {}
+      }
     >
       <div
-        style={hover ? { transform: "scale(1.1)" } : { transform: "scale(1)" }}
+        style={
+          hover && !isMobile
+            ? { transform: "scale(1.1)" }
+            : { transform: "scale(1)" }
+        }
       >
         <img
           style={

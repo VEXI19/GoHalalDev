@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--dark-green);
+  background: linear-gradient(180deg, var(--dark-green) 50%, white 50%);
 }
 
 .FoundersContainer {

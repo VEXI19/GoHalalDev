@@ -121,16 +121,16 @@ function Newsletter(props) {
           <div className="AgreamentTextContainer">
             <span className="AgreamentText">
               {getTranslation(
-                "I agree agree to the processing of my personal data in accordance with the Go Halal "
+                "I agree to the processing of my personal data in accordance with the Go Halal "
               )}
             </span>
-            <span className="AgreamentText underline">
+            <span className="link-text AgreamentText">
               {getTranslation("Data Protection Policy")}
             </span>
             <span className="AgreamentText">
               {getTranslation(". You can ")}
             </span>
-            <span className="AgreamentText underline">
+            <span className="link-text AgreamentText">
               {getTranslation("unsubscribe")}
             </span>
             <span className="AgreamentText">

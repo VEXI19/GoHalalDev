@@ -4,38 +4,16 @@ import arrowUp from "../../icons/up-arrow-svgrepo-com.svg";
 import MessageIcon from "../../icons/message-svgrepo-com.svg";
 import { getTranslation } from "../../Utils/getLanguage";
 import CloseIcon from "../../icons/icons8-close.svg";
-import HomeButton from "../../icons/Vector (13).svg";
-import SearchButton from "../../icons/search-svgrepo-com.svg";
-import MyCartButton from "../../icons/MyCart.svg";
-import FavouritesIcon from "../../icons/Vector (15).svg";
-import AccountIcon from "../../icons/Account.svg";
+
 import SearchBar from "../SearchBar/SearchBar";
 
-function FixedButtons(props) {
+function FixedButtons() {
   const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
 
   window.addEventListener("resize", () => {
     setWindowWitdth(window.innerWidth);
   });
 
-  if (windowWitdth <= 700) {
-    window.addEventListener("scroll", (ev) => {
-      const topBar = document.getElementById("TopBarMobile");
-      if (topBar) {
-        const rect = topBar.getBoundingClientRect();
-        var height = 0;
-        try {
-          height = document.getElementById("TopBarSearchBar").offsetHeight;
-        } finally {
-        }
-        if (window.pageYOffset - rect.height <= -height) {
-          setTopSearchBar(false);
-        }
-      }
-    });
-  }
-
-  const [topSearchBar, setTopSearchBar] = React.useState(false);
   const [messagesShow, setMessagesShow] = React.useState(false);
   const [messages, setMessages] = React.useState([
     {
@@ -54,6 +32,7 @@ function FixedButtons(props) {
       author: "user",
     },
   ]);
+
   return (
     <div className="FixedButtons">
       {messagesShow && (
@@ -67,30 +46,6 @@ function FixedButtons(props) {
             />
           </div>
           <div className="FixedButtonsMessageBoxBottom">
-            <div className="InputDiv">
-              <input
-                id="InputMessages"
-                placeholder={getTranslation("Write...")}
-              />
-              <span
-                onClick={() => {
-                  const input = document.getElementById("InputMessages");
-                  if (input.value !== "") {
-                    setMessages([
-                      ...messages,
-                      {
-                        timeStamp: Date.now(),
-                        text: input.value,
-                        author: "user",
-                      },
-                    ]);
-                  }
-                  input.value = "";
-                }}
-              >
-                {getTranslation("Send")}
-              </span>
-            </div>
             <div className="FixedButtonsMessageBoxBottomMessages">
               {messages.map((elem, index) => {
                 return (
@@ -108,6 +63,30 @@ function FixedButtons(props) {
               })}
             </div>
           </div>
+          <div className="InputDiv">
+            <input
+              id="InputMessages"
+              placeholder={getTranslation("Write...")}
+            />
+            <span
+              onClick={() => {
+                const input = document.getElementById("InputMessages");
+                if (input.value !== "") {
+                  setMessages([
+                    ...messages,
+                    {
+                      timeStamp: Date.now(),
+                      text: input.value,
+                      author: "user",
+                    },
+                  ]);
+                }
+                input.value = "";
+              }}
+            >
+              {getTranslation("Send")}
+            </span>
+          </div>
         </div>
       )}
       <div
@@ -122,7 +101,7 @@ function FixedButtons(props) {
       >
         <img src={arrowUp} alt="" />
       </div>
-      {topSearchBar && (
+      {/* {topSearchBar && (
         <div
           className="TopBarMobileSearchBarContainer"
           id="TopBarMobileSearchBarContainer"
@@ -136,11 +115,29 @@ function FixedButtons(props) {
           />
           <div className="WhiteLine"></div>
         </div>
-      )}
-      {windowWitdth <= 700 && (
+      )} */}
+      {/* {windowWitdth <= 700 && (
         <div className="BottomMenuMobile">
-          <img src={HomeButton} alt="" />
-          <img
+          <IconWrap
+            onClick={() => (window.location.href = "/")}
+            children={
+              <Link to={"/"} style={{ width: "100%" }}>
+                <img src={HomeButton} className="BottomMenuMobileImg" alt="" />
+              </Link>
+            }
+            title="Home"
+          ></IconWrap>
+
+          <IconWrap
+            children={<img src={AllCategoriesIcon} alt="" />}
+            title="All Categories"
+            onClick={() => setShowCategoriesMobile()}
+          />
+          <IconWrap
+            children={<img src={MyCartButton} alt="" />}
+            title="My Cart"
+          />
+          <IconWrap
             onClick={() => {
               const topBar = document.getElementById("TopBarMobile");
               const rect = topBar.getBoundingClientRect();
@@ -164,14 +161,16 @@ function FixedButtons(props) {
 
               window.scrollTo();
             }}
-            src={SearchButton}
-            alt=""
+            children={<img src={SearchButton} alt="" />}
+            title="Search"
           />
-          <img src={MyCartButton} alt="" />
-          <img src={FavouritesIcon} alt="" />
-          <img src={AccountIcon} alt="" />
+
+          <IconWrap
+            children={<img src={AccountIcon} alt="" />}
+            title="Account"
+          />
         </div>
-      )}
+      )} */}
     </div>
   );
 }

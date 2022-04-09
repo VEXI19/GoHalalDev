@@ -12,7 +12,6 @@ function CertifiedHalal(props) {
     if (window.innerWidth <= 960) {
       document.getElementById("CertifiedHalalContainer").style.flexDirection =
         "column";
-      document.getElementById("CertifiedHalalContainer").style.width = "60%";
       document.getElementById("CertifiedHalalIcon").style.width = "70%";
 
       document.getElementById("CertifiedHalalIcon").style.marginTop = "15%";
@@ -24,7 +23,6 @@ function CertifiedHalal(props) {
       document.getElementById("CertifiedHalalIcon").style.width = "100%";
 
       document.getElementById("CertifiedHalalIcon").style.marginTop = "0px";
-      document.getElementById("CertifiedHalalContainer").style.width = "90%";
       document.getElementById("CertifiedHalalContainer").style.textAlign =
         "left";
     }
@@ -34,7 +32,6 @@ function CertifiedHalal(props) {
     if (window.innerWidth <= 960) {
       document.getElementById("CertifiedHalalContainer").style.flexDirection =
         "column";
-      document.getElementById("CertifiedHalalContainer").style.width = "60%";
 
       document.getElementById("CertifiedHalalIcon").style.marginTop = "15%";
       document.getElementById("CertifiedHalalIcon").style.width = "70%";
@@ -44,7 +41,6 @@ function CertifiedHalal(props) {
       document.getElementById("CertifiedHalalContainer").style.flexDirection =
         "row";
       document.getElementById("CertifiedHalalIcon").style.marginTop = "0px";
-      document.getElementById("CertifiedHalalContainer").style.width = "90%";
       document.getElementById("CertifiedHalalContainer").style.textAlign =
         "left";
       document.getElementById("CertifiedHalalIcon").style.width = "100%";

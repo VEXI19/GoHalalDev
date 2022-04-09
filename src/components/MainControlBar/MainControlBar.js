@@ -16,6 +16,7 @@ import Favourites from "../../icons/Vectorfavourites.svg";
 import SaveForLater from "../../icons/Group 3907saveForLater.svg";
 import SearchBar from "../SearchBar/SearchBar";
 import ButtonWithDropDown from "../ButtonWIthDropDown/ButtonWithDropDown";
+import { Link } from "react-router-dom";
 
 function MainControlBar(props) {
   const Countries = [
@@ -120,16 +121,18 @@ function MainControlBar(props) {
           className="SearchBarLogo"
         >
           {windowWitdth >= 700 && (
-            <div
-              style={
-                windowWitdth <= 570
-                  ? { marginBottom: "20px", width: "150px", height: "150px" }
-                  : { marginBottom: "0", width: "90px", height: "90px" }
-              }
-              className="logo"
-            >
-              <img src={logo} alt="" />
-            </div>
+            <Link to={"/"}>
+              <div
+                style={
+                  windowWitdth <= 570
+                    ? { marginBottom: "20px", width: "150px", height: "150px" }
+                    : { marginBottom: "0", width: "90px", height: "90px" }
+                }
+                className="logo"
+              >
+                <img src={logo} alt="" />
+              </div>
+            </Link>
           )}
 
           <div className="SearchBarContainer">

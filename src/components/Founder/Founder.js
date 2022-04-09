@@ -6,18 +6,24 @@ import Mail from "../../icons/Vector (17).svg";
 import { getTranslation } from "../../Utils/getLanguage";
 
 function Founder({ elem }) {
+  const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
   const [showBiograpy, setShowBiography] = React.useState(false);
+
+  window.addEventListener("resize", () => {
+    setWindowWitdth(window.innerWidth);
+  });
 
   return (
     <div className="Founder">
       <div
         style={
-          showBiograpy
+          showBiograpy && windowWitdth < 700
             ? {
                 marginBottom: "0",
-                alignItems: "flex-start",
+                maxWidth: "400px",
+                alignItems: "center",
               }
-            : { marginBottom: "2em" }
+            : { marginBottom: "2em", maxWidth: "400px" }
         }
       >
         <img
@@ -54,12 +60,12 @@ function Founder({ elem }) {
           />
         </div>
       </div>
-      {showBiograpy && (
+      {(showBiograpy || windowWitdth >= 700) && (
         <div className="Biography">
           <span className="Header">{getTranslation("Biography")}</span>
           {elem.biography.map((elem, index) => {
             return (
-              <span className="Paragraph" key={index}>
+              <span className="Paragraph small-text" key={index}>
                 {getTranslation(elem)}
               </span>
             );

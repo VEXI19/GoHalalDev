@@ -85,7 +85,11 @@ function CategoriesBar(props) {
       {showAllCategories && (
         <>
           <LongDevider />
-          <AllCategories tabs={CategoriesDropDownList()} />
+          <AllCategories
+            tabs={CategoriesDropDownList()}
+            isMobile={false}
+            onClose={() => setShowAllCategories(false)}
+          />
         </>
       )}
     </div>

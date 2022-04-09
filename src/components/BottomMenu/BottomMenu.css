@@ -22,10 +22,21 @@
   flex-direction: row;
   max-width: 900px;
   width: 100%;
-
+  max-width: 800px;
   align-items: flex-start;
-  height: fit-content;
   justify-content: space-between;
+}
+
+@media (min-width: 1500px) {
+  .ListDivsContainer {
+    height: 500px;
+  }
+}
+
+@media (min-width: 650px) {
+  .ListDivsContainer {
+    height: 300px;
+  }
 }
 
 .BottomMenuHeader {
@@ -41,6 +52,13 @@
   color: black;
   font-size: clamp(3px, 5vw, 16px);
   cursor: pointer;
+  width: 80%;
+}
+
+@media (max-width: 1500px) {
+  .BottomMenuText {
+    width: 100%;
+  }
 }
 
 .paddingTopShortVersion {
@@ -54,7 +72,7 @@
 }
 
 .LongDiv {
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
 }
 

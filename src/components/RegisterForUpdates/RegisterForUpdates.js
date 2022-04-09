@@ -44,7 +44,7 @@ function RegisterForUpdates(props) {
       <div
         className="RegisterForUpdatesContainer"
         style={
-          windowWidth <= 750
+          windowWidth <= 1000
             ? {
                 flexDirection: "column",
               }
@@ -57,50 +57,61 @@ function RegisterForUpdates(props) {
           <img src={Mail} alt="" />
           <span>{getTranslation("Register for Updates")}</span>
         </div>
-        <div
-          className="InputContainer"
-          style={
-            windowWidth <= 750
-              ? {
-                  marginTop: "min(5vw, 15%)",
-                }
-              : {
-                  marginTop: "0",
-                }
-          }
-        >
+        <div className="InputContainer">
           <input
             id="RegisterEmail"
             onChange={(obj) => setEmail(obj.currentTarget.value)}
             placeholder="Your E-Mail Adress..."
           />
-          <button
-            disabled={!email}
-            onMouseEnter={() => setButtonHover(true)}
-            onMouseLeave={() => setButtonHover(false)}
-            style={
-              !email
-                ? { backgroundColor: "#556453", cursor: "auto" }
-                : buttonHover
-                ? { backgroundColor: "#0e3f07", cursor: "pointer" }
-                : { backgroundColor: "#115c07", cursor: "pointer" }
-            }
-            onClick={() => {
-              handleSubmit();
-              setThankYouPopUpShow(true);
-            }}
-          >
-            {getTranslation("Register Now")}
-          </button>
+          {windowWidth >= 1000 && (
+            <button
+              disabled={!email}
+              onMouseEnter={() => setButtonHover(true)}
+              onMouseLeave={() => setButtonHover(false)}
+              style={
+                !email
+                  ? { backgroundColor: "#556453", cursor: "auto" }
+                  : buttonHover
+                  ? { backgroundColor: "#0e3f07", cursor: "pointer" }
+                  : { backgroundColor: "#115c07", cursor: "pointer" }
+              }
+              onClick={() => {
+                handleSubmit();
+                setThankYouPopUpShow(true);
+              }}
+            >
+              {getTranslation("Register Now")}
+            </button>
+          )}
         </div>
-        {windowWidth >= 1050 && (
-          <div className="Icons">
-            <img src={Facebook} alt="" />
-            <img src={Twitter} alt="" />
-            <img src={Linkdin} alt="" />
-            <img src={YouTube} alt="" />
+        {windowWidth < 1000 && (
+          <div className="InputContainer">
+            <button
+              disabled={!email}
+              onMouseEnter={() => setButtonHover(true)}
+              onMouseLeave={() => setButtonHover(false)}
+              style={
+                !email
+                  ? { backgroundColor: "#556453", cursor: "auto" }
+                  : buttonHover
+                  ? { backgroundColor: "#0e3f07", cursor: "pointer" }
+                  : { backgroundColor: "#115c07", cursor: "pointer" }
+              }
+              onClick={() => {
+                handleSubmit();
+                setThankYouPopUpShow(true);
+              }}
+            >
+              {getTranslation("Register Now")}
+            </button>
           </div>
         )}
+        <div className="Icons">
+          <img src={Facebook} alt="" />
+          <img src={Twitter} alt="" />
+          <img src={Linkdin} alt="" />
+          <img src={YouTube} alt="" />
+        </div>
       </div>
     </div>
   );

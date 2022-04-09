@@ -16,7 +16,6 @@ function MenuObject({
   showDropDownList,
   shortVersion,
 }) {
-  // console.log(text, route);
   const [hover, setHover] = React.useState(false);
   return (
     <div

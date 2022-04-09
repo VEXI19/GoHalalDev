@@ -11,21 +11,33 @@ import founder2 from "../../icons/avatar1 2 (1).png";
 import founder3 from "../../icons/avatar1 3.png";
 import Founder from "../../components/Founder/Founder";
 import Poster from "../../icons/Method Draw Image (2).png";
+import History from "../../components/History/History";
+import HistoryList from "../../Utils/HistoryList";
+import CoreStats from "../../Utils/CoreStats";
+import PlayButton from "../../icons/Group 3227.svg";
 
 function AboutPage(props) {
   const [windowWitdth, setWindowWitdth] = React.useState(window.innerWidth);
 
   window.addEventListener("resize", () => setWindowWitdth(window.innerWidth));
 
-  const [searchParams] = useSearchParams();
+  // const [searchParams] = useSearchParams();
+  const search = window.location.search;
+  const searchParams = search.slice(search.indexOf("=") + 1, search.length);
+
   const [tabSelected, setTabSelected] = React.useState(
-    Object.keys(searchParams).length !== 0
-      ? searchParams.get("section")
-      : "ourstory"
+    searchParams.length > 0 ? searchParams : "ourstory"
   );
   const [lastTabSelected, setLastTabSelected] = React.useState(null);
 
+  const [windowWidth1500, setWindowWitdth1500] = React.useState(1500);
+
   React.useEffect(() => {
+    if (windowWitdth <= 1500) setWindowWitdth1500(windowWitdth * 0.9);
+  }, [windowWitdth]);
+
+  React.useEffect(() => {
+    console.log(window.location);
     if (lastTabSelected)
       document.getElementById(lastTabSelected).className = "";
     setLastTabSelected(tabSelected);
@@ -81,26 +93,26 @@ function AboutPage(props) {
 
   return (
     <div className="AboutUsContainer">
-      <SiteTemplate>
+      <SiteTemplate setShowCategoriesMobile={() => {}}>
         <div className="AboutUsContainer2">
           <div className="AboutUs">
             <div className="AboutUsPoster">
               <div className="Text">
-                <span className="AboutUsHeader">
+                <span className="AboutUsHeader header">
                   {getTranslation("About Go Halal")}
                 </span>
-                <span className="marginBottom2">
+                <span className="marginBottom2 AboutUsText">
                   {getTranslation("Authentic high quality halal")}
                 </span>
-                {windowWitdth >= 750 && (
-                  <span>
+                {windowWitdth >= 600 && (
+                  <span className="AboutUsText">
                     {getTranslation(
                       "Our mission is to make halal market transparent, affordable, easy, accessible and global."
                     )}
                   </span>
                 )}
               </div>
-              {windowWitdth >= 500 && (
+              {windowWitdth >= 400 && (
                 <img src={Poster} id="BigPoster" alt="" />
               )}
             </div>
@@ -111,33 +123,27 @@ function AboutPage(props) {
           style={{ backgroundColor: "var(--dark-green)" }}
         >
           <div className="AboutUsTab" id="AboutUsTab">
-            <div id="ourstory">
-              <span
-                onClick={() => {
-                  setTabSelected("ourstory");
-                }}
-              >
-                {getTranslation("Our Story")}
-              </span>
+            <div
+              id="ourstory"
+              onClick={() => {
+                setTabSelected("ourstory");
+              }}
+            >
+              <span>{getTranslation("Our Story")}</span>
             </div>
-            <div id="missionvision">
-              <span
-                onClick={() => {
-                  setTabSelected("missionvision");
-                }}
-              >
-                {getTranslation("Mission & Vision")}
-              </span>
+            <div
+              id="missionvision"
+              onClick={() => {
+                setTabSelected("missionvision");
+              }}
+            >
+              <span>{getTranslation("Mission & Vision")}</span>
             </div>
-            <div id="corevalues">
-              <span onClick={() => setTabSelected("corevalues")}>
-                {getTranslation("Core Values")}
-              </span>
+            <div id="corevalues" onClick={() => setTabSelected("corevalues")}>
+              <span>{getTranslation("Core Values")}</span>
             </div>
-            <div id="ourfounders">
-              <span onClick={() => setTabSelected("ourfounders")}>
-                {getTranslation("Our Founders")}
-              </span>
+            <div id="ourfounders" onClick={() => setTabSelected("ourfounders")}>
+              <span>{getTranslation("Our Founders")}</span>
             </div>
           </div>
         </div>
@@ -147,29 +153,46 @@ function AboutPage(props) {
             style={{ backgroundColor: "white" }}
           >
             <div className="CoreValues">
-              <span className="CoreValuesHeader">
+              <span className="CoreValuesHeader big-header">
                 {getTranslation("Our core values")}
               </span>
 
-              <span>
+              <span
+                className={
+                  windowWitdth <= 750
+                    ? "text"
+                    : "biger-text text-align-center text-bold text-line-height margin-bottom-1"
+                }
+              >
                 {getTranslation(
                   "Our core values are halal centric and a driving force at Go Halal to offer the best products and services to our customers and partners. Our decisons, work culture and collaborations, thinking and leadership are based on our core values for creating value for our community, partners for a better and healthy life."
                 )}
               </span>
-              {windowWitdth > 750 && (
-                <div className="Values">
+              {CoreValues().length === 8 && (
+                <div
+                  className="Values"
+                  style={{
+                    gridTemplateColumns: `repeat(min(${Math.floor(
+                      windowWidth1500 / 300
+                    )}, 4), 1fr)`,
+                  }}
+                >
                   {CoreValues().map((elem, index) => {
                     return (
                       <div className="SingleValue" key={index}>
                         <img src={elem.icon} alt="" />
-                        <span>{getTranslation(elem.text)}</span>
-                        <span>{getTranslation(elem.discription)}</span>
+                        <span className="small-header text-bold">
+                          {getTranslation(elem.text)}
+                        </span>
+                        <span className="small-text">
+                          {getTranslation(elem.discription)}
+                        </span>
                       </div>
                     );
                   })}
                 </div>
               )}
-              {windowWitdth <= 750 &&
+              {CoreValues().length === 4 &&
                 CoreValues().map((elem, index) => {
                   return (
                     <div className="Values2" key={index}>
@@ -184,6 +207,42 @@ function AboutPage(props) {
                     </div>
                   );
                 })}
+              {windowWitdth >= 700 && (
+                <>
+                  <div className="CoreValuesStats">
+                    {CoreStats().map((elem, index) => {
+                      return (
+                        <div key={index}>
+                          <span className="text-bold header">{elem.stat}</span>
+                          <span className="text-bold small-text">
+                            {getTranslation(elem.name)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="HistoryContainer">
+                    <div className="HistoryConteiner2">
+                      <div>
+                        <span className="header text-dark-green text-bold margin-bottom-0-5">
+                          {getTranslation("History")}
+                        </span>
+                        <div style={{ marginTop: "1em", marginBottom: "3em" }}>
+                          <span className="text text-bold">
+                            {getTranslation("Good Food, Good Life.")}
+                          </span>
+                          <span className="text">
+                            {getTranslation(
+                              " This is our founding ethos. Since 2020, our Halal products online have enriched the lives of the countless customers we’ve served. With a global vision backed by humble local beginnings, we aim to provide every nation with authentic, nutritious halal products."
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                      <History tabs={HistoryList()} />
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}
@@ -225,22 +284,24 @@ function AboutPage(props) {
           >
             <div className="OurStory">
               <span
-                className="CoreValuesHeader"
+                className="header text-dark-green text-bold margin-bottom-1"
                 style={{ alignSelf: "flex-start" }}
               >
                 {getTranslation("Our Story")}
               </span>
-              <span>
+              <span className="text text-line-height">
                 {getTranslation(
                   "When Dr. Ali Abas Wani, the founder and CEO of Go Halal came to Germany as an immigrant, he was thoroughly disappointed with the existing halal food shopping experience. Grocery stores, even specialty stores like Aldi and Lidl etc, offered little to no halal products, and the levels of hygiene and cleanliness at the exclusive halal supermarkets were not satisfactory whatsoever. As a Food Science Professor &  MBA graduate with 20 years of experience in food quality, hygenic design, halal traceability, packaging, and food safety principles, Dr. Wani knew that something had to be done. After quiting the job, Dr. Wani decided to step in. With his passion for halal, high quality food, and consumer service, he teamed up with Ferhat Balyeli and Philipp Tomio (Co-founders) at Mannheim and ESSEC business schools to establish a Go Halal market. Together, our combined 50 years of experience are helping reshape and revolutionize the halal shopping experience, providing our community with the highest quality authentic halal food for better health and a happier you.”"
                 )}
               </span>
-              <div className="wideo">video</div>
-              <span>
+              <span className="text text-line-height margin-top-2">
                 {getTranslation(
                   "Go Halal counts scientists and innovation experts amongst its ranks. Our halal supply chain is strictly monitored for quality, food safety and halal fraud to ensure that the fresh and high quality halal products are delivered to our custiomers.  Each of these processes is watched and audited by industry specialists – so you can sink your teeth into a home-delivered Halal meal at the end of it all."
                 )}
               </span>
+              <div className="wideo">
+                <img src={PlayButton} alt="" />
+              </div>
             </div>
           </div>
         )}
@@ -250,7 +311,7 @@ function AboutPage(props) {
             style={{ backgroundColor: "white" }}
           >
             <div className="OurFounders">
-              <span className="CoreValuesHeader">
+              <span className="header text-dark-green text-bold margin-bottom-1">
                 {getTranslation("Our Founders")}
               </span>
               {founders.map((elem, index) => {

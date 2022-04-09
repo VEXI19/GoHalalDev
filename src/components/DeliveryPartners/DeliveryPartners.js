@@ -30,67 +30,15 @@ function DeliveryPartners(props) {
         {windowWidth <= 1350 && (
           <>
             <div
-              style={
-                windowWidth <= 700
-                  ? { flexDirection: "column" }
-                  : windowWidth <= 1350
-                  ? { flexDirection: "row", marginBottom: "min(10vw, 40px)" }
-                  : { flexDirection: "row", marginBottom: "0" }
-              }
+              style={{ flexDirection: "row", marginBottom: "min(10vw, 40px)" }}
             >
-              <img
-                style={
-                  windowWidth <= 700
-                    ? { marginBottom: "min(15vw, 70px)" }
-                    : { marginBottom: "0" }
-                }
-                src={GoHalalDeliveryLogo}
-                alt=""
-              />
-              <img
-                style={
-                  windowWidth <= 700
-                    ? { marginBottom: "min(15vw, 70px)" }
-                    : { marginBottom: "0" }
-                }
-                src={DHLLogo}
-                alt=""
-              />
-              <img
-                style={
-                  windowWidth <= 700
-                    ? { marginBottom: "min(15vw, 70px)" }
-                    : { marginBottom: "0" }
-                }
-                src={UPSLogo}
-                alt=""
-              />
+              <img src={GoHalalDeliveryLogo} alt="" />
+              <img src={DHLLogo} alt="" />
+              <img src={UPSLogo} alt="" />
             </div>
-            <div
-              style={
-                windowWidth <= 700
-                  ? { flexDirection: "column" }
-                  : { flexDirection: "row" }
-              }
-            >
-              <img
-                style={
-                  windowWidth <= 700
-                    ? { marginBottom: "min(15vw, 70px)" }
-                    : { marginBottom: "0" }
-                }
-                src={DPDLogo}
-                alt=""
-              />
-              <img
-                style={
-                  windowWidth <= 700
-                    ? { marginBottom: "min(15vw, 70px)" }
-                    : { marginBottom: "0" }
-                }
-                src={HermesLogo}
-                alt=""
-              />
+            <div style={{ flexDirection: "row" }}>
+              <img src={DPDLogo} alt="" />
+              <img src={HermesLogo} alt="" />
               <img src={GLSLogo} alt="" />
             </div>
           </>

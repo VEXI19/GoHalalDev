@@ -10,6 +10,8 @@ function SearchBar({
   size,
   buttonLeft = false,
   buttonTransparent = false,
+  showButton = true,
+  padding = "0.5em",
 }) {
   const Categories = ["All Categories", "Meat", "Vegies", "Fruits", "Milk"];
   return (
@@ -23,7 +25,12 @@ function SearchBar({
             : { flexDirection: "row" }
         }
       >
-        <input type="text" id="header-search" placeholder={placeholder} />
+        <input
+          style={{ padding: `0 ${padding} 0 ${padding}` }}
+          type="text"
+          id="header-search"
+          placeholder={placeholder}
+        />
         <div>
           {isCategories && (
             <>
@@ -34,29 +41,36 @@ function SearchBar({
               />
             </>
           )}
-          <button
-            style={
-              !button
-                ? buttonTransparent
-                  ? { width: size, backgroundColor: "transparent" }
-                  : { width: size, backgroundColor: "#a5cc25" }
-                : {}
-            }
-          >
-            {button && <span style={{ padding: "0.5em 0.5em" }}>{button}</span>}
+          {showButton && (
+            <button
+              style={
+                !button
+                  ? buttonTransparent
+                    ? { width: size, backgroundColor: "transparent" }
+                    : { width: size, backgroundColor: "#a5cc25" }
+                  : {}
+              }
+            >
+              {button && (
+                <span style={{ padding: "0.5em 0.5em" }}>{button}</span>
+              )}
 
-            {!button && (
-              <img
-                style={
-                  buttonTransparent
-                    ? { width: "min(4vw, 25px)", filter: "var(--dark-filter)" }
-                    : {}
-                }
-                src={searchButton}
-                alt=""
-              />
-            )}
-          </button>
+              {!button && (
+                <img
+                  style={
+                    buttonTransparent
+                      ? {
+                          width: "min(4vw, 25px)",
+                          filter: "var(--dark-filter)",
+                        }
+                      : {}
+                  }
+                  src={searchButton}
+                  alt=""
+                />
+              )}
+            </button>
+          )}
         </div>
       </form>
     </div>

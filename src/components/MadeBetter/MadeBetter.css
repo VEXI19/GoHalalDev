@@ -21,7 +21,26 @@
   width: 100%;
 }
 
+@media (max-width: 1050px) {
+  .MadeBetterContainer {
+    width: 60%;
+  }
+}
+
 .MadeBetterText {
   max-width: 400px;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .MadeBetterContainer {
+    width: 80%;
+  }
+
+  /* .MadeBetterPhoto {
+    width: 80%;
+  }
+  .MadeBetterText {
+    width: 80%;
+  } */
 }
