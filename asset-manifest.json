@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GoHalalDev/static/css/main.4c2ddd07.css",
-    "main.js": "/GoHalalDev/static/js/main.65fbeda7.js",
+    "main.css": "/GoHalalDev/static/css/main.a700ec2d.css",
+    "main.js": "/GoHalalDev/static/js/main.ec5573c5.js",
     "static/media/Group 2331founder.svg": "/GoHalalDev/static/media/Group 2331founder.5a93a82ba85ece65e9a811b8fbb7d6b9.svg",
     "static/media/Package 1MadeBetter.svg": "/GoHalalDev/static/media/Package 1MadeBetter.a2d8efb363a6493de385a5f6fdc1c4bb.svg",
     "static/media/Group 5348.svg": "/GoHalalDev/static/media/Group 5348.734779eab50163a86ef9d987f82b55bc.svg",
@@ -31,7 +31,6 @@
     "static/media/Cosmetic.svg": "/GoHalalDev/static/media/Cosmetic.4950d7db589b7aea241e12cc58aefb70.svg",
     "static/media/svg (2).svg": "/GoHalalDev/static/media/svg (2).8c1335f797dea6f0eabd78db0601292a.svg",
     "static/media/user 1AboutUs2.svg": "/GoHalalDev/static/media/user 1AboutUs2.943c07e71579651cc73975fdb7f730f5.svg",
-    "static/media/image 203.png": "/GoHalalDev/static/media/image 203.d5cb101628bdb71d03fc.png",
     "static/media/Group 5136.svg": "/GoHalalDev/static/media/Group 5136.9cfbd7ab8e321f8995cdecd1f697512d.svg",
     "static/media/GroupLogo (2).svg": "/GoHalalDev/static/media/GroupLogo (2).57d58d60031a171f5f9a1e02213ede76.svg",
     "static/media/Group 4460OurStory.svg": "/GoHalalDev/static/media/Group 4460OurStory.1e76f24b5ac8b74fbb99c5adfc233f56.svg",
@@ -159,11 +158,11 @@
     "static/media/icons8-menu.svg": "/GoHalalDev/static/media/icons8-menu.151ef2b70c060f0ed4956ce988930ed3.svg",
     "static/media/Line 164Line.svg": "/GoHalalDev/static/media/Line 164Line.f4671cb895ea96255154d2a5c60cac25.svg",
     "static/media/rightArrow.svg": "/GoHalalDev/static/media/rightArrow.e13f23e5b26d2fd4ce9903f5404e5de8.svg",
-    "main.4c2ddd07.css.map": "/GoHalalDev/static/css/main.4c2ddd07.css.map",
-    "main.65fbeda7.js.map": "/GoHalalDev/static/js/main.65fbeda7.js.map"
+    "main.a700ec2d.css.map": "/GoHalalDev/static/css/main.a700ec2d.css.map",
+    "main.ec5573c5.js.map": "/GoHalalDev/static/js/main.ec5573c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c2ddd07.css",
-    "static/js/main.65fbeda7.js"
+    "static/css/main.a700ec2d.css",
+    "static/js/main.ec5573c5.js"
   ]
 }
