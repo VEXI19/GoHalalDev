@@ -1,74 +1,82 @@
 import React from "react";
 import "./ZipCode.css";
+import { KeyPress } from "../../App";
 
-const ZipCodeInput = ({ focusable, focused, handleChange, value, elem }) => {
-  const input = React.useRef();
+function InputBox({ value, handleInput, focused }) {
+  // single input
 
+  const inputRef = React.useRef();
   React.useEffect(() => {
-    if (focused) {
-      console.log("done");
-      input.current.focus();
-    }
+    if (focused) inputRef.current.focus();
   }, [focused]);
 
-  console.log("test", focusable, focused, elem);
-
   return (
-    <div className="ZipCodeInput">
-      <input
-        onInput={(obj) => {
-          console.log(obj.currentTarget.value);
-
-          handleChange(obj);
-        }}
-        maxLength={1}
-        type="number"
-        disabled={!focusable}
-        ref={input}
-      />
-    </div>
+    <input
+      className="InputBox"
+      ref={inputRef}
+      value={value.toUpperCase()}
+      maxLength={1}
+      disabled={!focused}
+      onChange={(ev) => handleInput(ev.currentTarget.value)}
+    ></input>
   );
-};
+}
 
-function ZipCode(props) {
-  const [code, setCode] = React.useState("");
-  const [putInFocus, setPutInFocus] = React.useState(false);
+function WordDisplay({ handleChange }) {
+  // inputs container
 
-  const arrayLength = (array) => {
-    var count = 0;
-    array.forEach((elem) => {
-      if (elem !== null) count++;
+  const [word, setWord] = React.useState(new Array(5).fill(""));
+  const keyPress = React.useContext(KeyPress);
+
+  React.useEffect(() => {
+    if (
+      keyPress &&
+      keyPress.type === "keydown" &&
+      keyPress.key === "Backspace"
+    ) {
+      DeleteLastLetter();
+    }
+    // if (keyPress && keyPress.key === "Enter") console.log(word.join(""));
+  }, [keyPress]);
+
+  const DeleteLastLetter = () => {
+    var temp = word;
+
+    word.forEach((elem, index) => {
+      if (elem === "" && index !== 0) {
+        temp[index - 1] = "";
+      }
     });
-    return count;
+    if (temp === word) {
+      temp[temp.length - 1] = "";
+    }
+    setWord(temp);
+    console.log(temp, word);
+  };
+
+  const Focusable = (index) => {
+    if (
+      (word[index] === "" && index === 0) ||
+      (index - 1 >= 0 && word[index] === "" && word[index - 1] !== "") ||
+      (word[index] !== "" && index === word.length - 1)
+    )
+      return true;
+    return false;
   };
 
   return (
-    <div
-      className="ZipCode"
-      onClick={() => {
-        setPutInFocus(!putInFocus);
-      }}
-    >
+    <div className="WordDisplay">
       {[0, 1, 2, 3, 4].map((elem) => {
-        // console.log(arrayLength(code), elem, code);
-        // console.log(
-        //   elem,
-        //   elem === arrayLength(code) || putInFocus,
-        //   elem <= arrayLength(code)
-        // );
-
         return (
-          <ZipCodeInput
+          <InputBox
             key={elem}
-            elem={elem}
-            focusable={elem <= code.length}
-            focused={elem === code.length || putInFocus}
-            value={code[elem]}
-            handleChange={(obj) => {
-              //   var temp = code;
-              //   code[elem] = obj.currentTarget.value;
-              //   console.log(temp, code);
-              setCode(code + obj.currentTarget.value);
+            value={word[elem]}
+            focused={Focusable(elem)}
+            handleInput={(letter) => {
+              var temp = word;
+              temp[elem] = letter;
+              handleChange(temp);
+              setWord(temp);
             }}
           />
         );
@@ -77,4 +85,4 @@ function ZipCode(props) {
   );
 }
 
-export default ZipCode;
+export default WordDisplay;

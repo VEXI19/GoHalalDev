@@ -46,7 +46,7 @@ function PopUpWelcomeGuest({ isShown = true, handleClose, handleSuccess }) {
     deliveryAddress === "" ||
     city === "" ||
     country === "" ||
-    zipCode === "" ||
+    zipCode.length !== 5 ||
     !checkBox;
 
   return (
@@ -104,14 +104,14 @@ function PopUpWelcomeGuest({ isShown = true, handleClose, handleSuccess }) {
                 onChange={(obj) => setLastName(obj.currentTarget.value)}
               />
             </div>
-            <input
+            {/* <input
               className="PopUpInput"
               id="zipcode"
               placeholder="Zip Code"
               onChange={(obj) => setZipCode(obj.currentTarget.value)}
               style={{ marginTop: "1em", width: "calc(50% - 1.8em)" }}
-            />
-            {/* <ZipCode /> */}
+            /> */}
+            <ZipCode handleChange={(zipCode) => setZipCode(zipCode.join(""))} />
             <input
               className="PopUpInput"
               id="deliveryAddress"

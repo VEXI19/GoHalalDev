@@ -26,7 +26,7 @@ function HeyMunchen(props) {
         handleClose={() => setShowPopUpThankYou(false)}
         headerText="Thank you for interest  to pre order our products. You will be among the first to recieve our products. Will be back to you soon!"
         isShown={showPopUpThankYou}
-        link="/"
+        link="www.gohalal.com"
       />
       <div className="HeyMunchenContainer">
         <img id="HeyMunchenHeader" src={HeyMunchenHeader} alt="" />
